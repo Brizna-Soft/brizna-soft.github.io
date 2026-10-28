@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CoopMinimap · Minimapa para Silksong en cooperativo · Brizna Soft</title>
+  <meta name="description" content="CoopMinimap es un mod gratis para jugar Hollow Knight: Silksong en cooperativo: muestra a tu compañero en el mapa, te avisa cuando cae y te marca a dónde ir.">
+  <meta name="theme-color" content="#1D9E75">
+  <link rel="icon" href="../../img/brizna-soft.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../estilos.css">
+  <link rel="canonical" href="https://brizna-soft.github.io/mods/coopminimap/">
+
+  <!-- Vista previa al compartir el enlace (WhatsApp, Telegram, Facebook...) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Brizna Soft">
+  <meta property="og:title" content="CoopMinimap · Minimapa para Silksong en cooperativo">
+  <meta property="og:description" content="Un mod gratis para jugar Silksong en cooperativo: tu compañero en el mapa, un aviso cuando cae y los objetivos marcados.">
+  <meta property="og:url" content="https://brizna-soft.github.io/mods/coopminimap/">
+  <meta property="og:image" content="https://brizna-soft.github.io/img/mods/coopminimap-partida.jpg">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="915">
+  <meta property="og:locale" content="es_LA">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <style>
+    /* Solo para esta página; los colores y la letra vienen de estilos.css */
+    .estrecho > * { max-width: 820px; }
+    h2.separado { margin-top: 56px; }
+
+    .aviso {
+      padding: 18px 20px;
+      border-radius: var(--radio);
+      border: 1px solid color-mix(in srgb, #E0A030 45%, var(--borde));
+      background: color-mix(in srgb, #E0A030 12%, var(--fondo));
+    }
+    .aviso.suave {
+      margin-top: 24px;
+      border-color: color-mix(in srgb, var(--verde) 30%, var(--borde));
+      background: color-mix(in srgb, var(--verde) 8%, var(--fondo));
+    }
+    .aviso p { margin: 0; }
+    .aviso + h2 { margin-top: 48px; }
+
+    .capturas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; align-items: start; }
+    .capturas figure { margin: 0; }
+    .capturas .ancha { grid-column: 1 / -1; }
+    .capturas img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      border: 1px solid var(--borde);
+      box-shadow: var(--sombra);
+    }
+    .capturas figcaption { margin-top: 10px; color: var(--suave); font-size: 0.92rem; }
+
+    .requisitos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .tarjeta { padding: 22px; border: 1px solid var(--borde); border-radius: var(--radio); background: var(--fondo); }
+    .tarjeta h3 { margin: 0 0 8px; font-size: 1.15rem; }
+    .tarjeta p { margin: 0; color: var(--suave); }
+
+    .pasos { counter-reset: paso; list-style: none; margin: 0; padding: 0; }
+    .pasos > li { counter-increment: paso; position: relative; margin: 0 0 20px; padding-left: 48px; }
+    .pasos > li::before {
+      content: counter(paso);
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: grid;
+      place-items: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--verde);
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+    .carpeta {
+      margin: 12px 0;
+      padding: 14px 16px;
+      overflow-x: auto;
+      border: 1px solid var(--borde);
+      border-radius: 10px;
+      background: var(--fondo);
+      font-family: Consolas, "Cascadia Mono", Menlo, monospace;
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+    .carpeta b { color: var(--verde); }
+
+    .tabla-caja { overflow-x: auto; border: 1px solid var(--borde); border-radius: var(--radio); background: var(--fondo); }
+    .tabla { width: 100%; border-collapse: collapse; }
+    .tabla th, .tabla td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--borde); }
+    .tabla thead th { background: var(--fondo-alt); color: var(--suave); font-size: 0.85rem; }
+    .tabla tbody tr:last-child td { border-bottom: none; }
+    .tabla td:first-child { white-space: nowrap; }
+    kbd {
+      font-family: Consolas, "Cascadia Mono", Menlo, monospace;
+      font-size: 0.85em;
+      padding: 1px 7px;
+      border: 1px solid var(--borde);
+      border-bottom-width: 2px;
+      border-radius: 6px;
+      background: var(--fondo-alt);
+      white-space: nowrap;
+    }
+
+    .descarga {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 28px;
+      border: 1px solid var(--borde);
+      border-radius: var(--radio);
+      background: var(--fondo);
+      box-shadow: var(--sombra);
+    }
+    .descarga h2 { margin-bottom: 6px; }
+    .descarga p { margin: 0; }
+    .descarga .botones { margin-top: 0; flex-shrink: 0; }
+    .huella code { word-break: break-all; }
+
+    @media (max-width: 760px) {
+      .capturas, .requisitos { grid-template-columns: 1fr; }
+      .descarga { flex-direction: column; align-items: flex-start; padding: 20px; }
+      .tabla th, .tabla td { padding: 8px 10px; }
+      .pasos > li { padding-left: 42px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="saltar" href="#contenido">Ir al contenido</a>
+
+  <header class="cabecera">
+    <div class="contenedor cabecera-fila">
+      <a class="marca" href="../../">
+        <img src="../../img/brizna-soft.svg" alt="" width="32" height="32">
+        <span>Brizna Soft</span>
+      </a>
+      <nav class="menu" aria-label="Secciones">
+        <a href="../../#programas">Programas</a>
+        <a href="../../#mods">Mods</a>
+        <a href="../../#donar">Donar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="portada">
+      <div class="contenedor">
+        <p class="etiqueta">Mod gratis para Hollow Knight: Silksong</p>
+        <h1>Un minimapa para jugar <span>en equipo.</span></h1>
+        <p class="entrada">CoopMinimap muestra a tu compañero en el mapa, te avisa cuando cae y te marca a dónde ir. Es un complemento del mod cooperativo SSMP.</p>
+        <div class="botones">
+          <a class="boton principal" href="https://github.com/Brizna-Soft/CoopMinimap/releases/download/v0.6.3/CoopMinimap-0.6.3.zip">Descargar 0.6.3 (beta)</a>
+          <a class="boton" href="#instalar">Cómo instalarlo</a>
+        </div>
+        <p class="nota">Gratis y de código abierto · <a href="https://github.com/Brizna-Soft/CoopMinimap">Código en GitHub</a></p>
+      </div>
+    </section>
+
+    <section id="capturas" class="seccion">
+      <div class="contenedor">
+        <div class="aviso" role="note">
+          <p><strong>Es una versión beta.</strong> La 0.6.3 todavía no la jugamos en una partida completa. La versión anterior, la 0.6.0, sí la probamos en cooperativo con dos PC. Si algo se ve raro, cuéntanos en <a href="https://github.com/Brizna-Soft/CoopMinimap/issues">GitHub</a>.</p>
+        </div>
+
+        <h2>Cómo se ve</h2>
+        <div class="capturas">
+          <figure class="ancha">
+            <img src="../../img/mods/coopminimap-partida.jpg" width="1600" height="915"
+                 alt="Los dos jugadores sentados en una banca de Silksong. Abajo a la derecha, el minimapa con el compañero en celeste y una flecha naranja en el borde.">
+            <figcaption>Los dos jugadores en una banca. Abajo a la derecha está el minimapa: tu compañero sale en celeste y la flecha naranja apunta hacia el objetivo principal.</figcaption>
+          </figure>
+          <figure>
+            <img src="../../img/mods/coopminimap-minimapa.png" width="560" height="448" loading="lazy"
+                 alt="El minimapa de cerca: el objetivo principal escrito arriba, las salas en blanco, la cabeza celeste del compañero y una flecha naranja.">
+            <figcaption>El minimapa de cerca. Arriba dice cuál es el objetivo principal.</figcaption>
+          </figure>
+          <figure>
+            <img src="../../img/mods/coopminimap-mapa-rapido.jpg" width="1600" height="900" loading="lazy"
+                 alt="El mapa rápido del juego abierto en Marcha del Cazador, con el minimapa de CoopMinimap en la esquina.">
+            <figcaption>Con el mapa rápido del juego abierto. Desde la 0.6.3, el minimapa copia su estilo.</figcaption>
+          </figure>
+        </div>
+        <p class="nota">Fotos de una partida real con la versión 0.6.0, del 27 de octubre de 2026. Tapamos los nombres de los jugadores. Cuando probemos la 0.6.3, ponemos fotos nuevas.</p>
+      </div>
+    </section>
+
+    <section id="que-hace" class="seccion alterna">
+      <div class="contenedor estrecho">
+        <h2>Qué hace</h2>
+        <ul class="lista">
+          <li><strong>Un minimapa en la esquina</strong>, hecho con el mapa del propio juego. Se ve como el mapa rápido: bancas, tiendas, marcas de misión, las marcas que pusiste y los nombres de las zonas vecinas.</li>
+          <li><strong>Tu compañero en el mapa</strong>, con su nombre, en el minimapa y en el mapa grande de Interactive Map. Si se aleja, una flecha en el borde del minimapa te dice hacia dónde está.</li>
+          <li><strong>Aviso de «compañero caído»</strong>: cuando cae y queda en su capullo, te dice cuántos de los 5 golpes lleva y si está en otra sala.</li>
+          <li><strong>Objetivos marcados</strong>: un anillo naranja para el principal y uno morado para los secundarios.</li>
+          <li><strong>F9 te lleva junto a tu compañero</strong> cuando están en la misma sala, para salir de un atasco.</li>
+          <li><strong>F6 da 1000 rosarios.</strong> Viene apagado; lo puedes prender en los ajustes.</li>
+          <li>Arregla un error del juego que el modo cooperativo puede provocar, y evita que un panel invisible de Interactive Map bloquee los clics en los menús.</li>
+          <li>Habla en español si tu juego está en español; si no, en inglés.</li>
+          <li>No manda nada por internet: cada jugador decide si lo usa.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="requisitos" class="seccion">
+      <div class="contenedor">
+        <h2>Qué necesitas</h2>
+        <div class="requisitos">
+          <div class="tarjeta">
+            <h3>Silksong en PC</h3>
+            <p>Hollow Knight: Silksong en Windows. Lo probamos con la versión 1.0.30000 del juego.</p>
+          </div>
+          <div class="tarjeta">
+            <h3>El mod cooperativo</h3>
+            <p><a href="https://github.com/Candy-649/SSMP/releases">SSMP en su versión cooperativa, de Candy-649</a> (silksong-coop-mod). CoopMinimap 0.6.3 está hecho para su versión 0.4.135. Su instalador también pone BepInEx.</p>
+          </div>
+          <div class="tarjeta">
+            <h3>Interactive Map</h3>
+            <p><a href="https://www.nexusmods.com/hollowknightsilksong/mods/420">El mod de mapa de Pilout</a>, en Nexus Mods. Es necesario: CoopMinimap no funciona sin él. Lo probamos con la 1.1.9.</p>
+          </div>
+        </div>
+        <p class="nota">Los dos jugadores tienen que tener la misma versión del mod cooperativo. CoopMinimap lo instala cada uno en su PC; si solo uno lo tiene, a ese le funciona igual.</p>
+      </div>
+    </section>
+
+    <section id="instalar" class="seccion alterna">
+      <div class="contenedor estrecho">
+        <h2>Cómo instalarlo</h2>
+        <ol class="pasos">
+          <li><strong>Instala el mod cooperativo.</strong> En <a href="https://github.com/Candy-649/SSMP/releases">su página</a>, baja el archivo <code>silksong-coop-mod-….zip</code> (no el «Source code»), descomprímelo y abre <code>INSTALL.bat</code>. Ese instalador busca el juego, guarda una copia de tus partidas y pone BepInEx y el mod. Nosotros usamos la versión 0.4.135.</li>
+          <li><strong>Instala Interactive Map</strong> desde <a href="https://www.nexusmods.com/hollowknightsilksong/mods/420">su página de Nexus Mods</a>, siguiendo sus instrucciones.</li>
+          <li><strong>Cierra el juego.</strong></li>
+          <li><strong>Baja CoopMinimap:</strong> <a href="https://github.com/Brizna-Soft/CoopMinimap/releases/download/v0.6.3/CoopMinimap-0.6.3.zip">CoopMinimap-0.6.3.zip</a>.</li>
+          <li><strong>Abre la carpeta del juego.</strong> En Steam, haz clic derecho en Hollow Knight: Silksong y elige <em>Administrar → Ver archivos locales</em>.</li>
+          <li><strong>Descomprime el zip en esa carpeta</strong>, la que tiene <code>Hollow Knight Silksong.exe</code>. CoopMinimap tiene que quedar junto a <code>SSMP.dll</code>, así:
+<pre class="carpeta">Hollow Knight Silksong
+├─ Hollow Knight Silksong.exe
+└─ BepInEx
+   └─ plugins
+      └─ SSMP
+         ├─ SSMP.dll
+         ├─ <b>CoopMinimap.dll</b>
+         ├─ <b>CoopMinimap-README.txt</b>
+         └─ <b>CoopMinimap-LICENSE.txt</b></pre>
+            Si tu <code>SSMP.dll</code> está en otra carpeta, pon <code>CoopMinimap.dll</code> junto a él.</li>
+          <li><strong>Abre el juego y conéctate con tu compañero.</strong> Unos segundos después, el chat dice «CoopMinimap: F9 = ir junto a tu compañero, F8 = estilo del minimapa, F10 = mostrar u ocultar». Eso quiere decir que funciona.</li>
+        </ol>
+        <div class="aviso suave">
+          <p><strong>Para ver a tu compañero cuando está en otra sala</strong>, el anfitrión (el que creó la partida) escribe en el chat <code>/set globalmapicons true</code>. Si hace falta, CoopMinimap te lo recuerda al conectarte.</p>
+        </div>
+        <p class="nota">Para quitarlo, borra <code>CoopMinimap.dll</code>, <code>CoopMinimap.cfg</code> y los dos <code>.txt</code> de CoopMinimap.</p>
+      </div>
+    </section>
+
+    <section id="teclas" class="seccion">
+      <div class="contenedor estrecho">
+        <h2>Teclas</h2>
+        <div class="tabla-caja">
+          <table class="tabla">
+            <thead><tr><th scope="col">Tecla</th><th scope="col">Qué hace</th></tr></thead>
+            <tbody>
+              <tr><td><kbd>F8</kbd></td><td>Cambia el minimapa: el del mapa del juego o el de Interactive Map (MapGenie).</td></tr>
+              <tr><td><kbd>F10</kbd></td><td>Muestra u oculta el minimapa.</td></tr>
+              <tr><td><kbd>Re Pág</kbd> / <kbd>Av Pág</kbd></td><td>Acerca o aleja el minimapa (también <kbd>+</kbd> y <kbd>-</kbd> del teclado numérico).</td></tr>
+              <tr><td><kbd>F9</kbd></td><td>Te lleva junto a tu compañero cuando están en la misma sala. Viene prendido.</td></tr>
+              <tr><td><kbd>F6</kbd></td><td>Te da 1000 rosarios. Viene apagado.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="ajustes" class="separado">Ajustes</h2>
+        <p>La primera vez que abres el juego, CoopMinimap crea el archivo <code>CoopMinimap.cfg</code> junto a <code>CoopMinimap.dll</code>. Para cambiar algo, cierra el juego, abre ese archivo con el Bloc de notas, cambia el valor que va después del <code>=</code> y guarda.</p>
+        <div class="tabla-caja">
+          <table class="tabla">
+            <thead><tr><th scope="col">Ajuste</th><th scope="col">Qué hace</th><th scope="col">Viene así</th></tr></thead>
+            <tbody>
+              <tr><td><code>rosary_key</code></td><td>F6 da 1000 rosarios (<code>true</code> = prendido, <code>false</code> = apagado).</td><td><code>false</code></td></tr>
+              <tr><td><code>teleport_key</code></td><td>F9 te lleva junto a tu compañero.</td><td><code>true</code></td></tr>
+              <tr><td><code>style</code></td><td><code>game</code> = minimapa del juego; <code>mapgenie</code> = el de Interactive Map.</td><td><code>game</code></td></tr>
+              <tr><td><code>visible</code></td><td>Mostrar el minimapa.</td><td><code>true</code></td></tr>
+              <tr><td><code>zoom</code></td><td>Qué tan de cerca se ve el minimapa, de 0.25 a 4.</td><td><code>1</code></td></tr>
+              <tr><td><code>zone_only</code></td><td>Solo la zona donde estás, como el mapa rápido (<code>false</code> = todas las zonas que tienes en el mapa).</td><td><code>true</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="nota">Ejemplo: para prender los rosarios, cambia <code>rosary_key=false</code> por <code>rosary_key=true</code>.</p>
+      </div>
+    </section>
+
+    <section id="descargar" class="seccion alterna">
+      <div class="contenedor">
+        <div class="descarga">
+          <div>
+            <h2>Descargar</h2>
+            <p>CoopMinimap 0.6.3 (beta) · 37 KB · para el mod cooperativo 0.4.135</p>
+            <p class="nota huella">Huella SHA-256 del zip, para comprobar que es el original: <code>C3F15BFF68BA261718E01988FC1CAE03085C00B267732DBBE66C464E98A8F78F</code></p>
+          </div>
+          <div class="botones">
+            <a class="boton principal" href="https://github.com/Brizna-Soft/CoopMinimap/releases/download/v0.6.3/CoopMinimap-0.6.3.zip">Descargar 0.6.3 (beta)</a>
+            <a class="enlace" href="https://github.com/Brizna-Soft/CoopMinimap/releases">Todas las versiones →</a>
+          </div>
+        </div>
+        <p class="nota">El código es abierto (licencia MIT) y está en <a href="https://github.com/Brizna-Soft/CoopMinimap">GitHub</a>. Pronto también vas a poder bajarlo de Nexus Mods.</p>
+      </div>
+    </section>
+
+    <section id="creditos" class="seccion">
+      <div class="contenedor estrecho">
+        <h2>Créditos</h2>
+        <ul class="lista">
+          <li><strong>Team Cherry</strong>, por Hollow Knight: Silksong. CoopMinimap es un mod hecho por fans; Team Cherry no lo hizo ni lo respalda.</li>
+          <li><strong>Extremelyd1</strong> y colaboradores, por <a href="https://github.com/Extremelyd1/SSMP">SSMP</a>, el mod multijugador, y <strong>Candy-649</strong>, por <a href="https://github.com/Candy-649/SSMP">su versión cooperativa</a>.</li>
+          <li><strong>Pilout</strong>, por <a href="https://www.nexusmods.com/hollowknightsilksong/mods/420">Interactive Map</a>. Su minimapa MapGenie y los datos del mapa son parte de Interactive Map.</li>
+          <li>El equipo de <a href="https://github.com/BepInEx/BepInEx">BepInEx</a>, el cargador de mods.</li>
+          <li>Hecho por <strong>Brizna Soft</strong>, con ayuda de IA.</li>
+        </ul>
+        <div class="aviso suave">
+          <p><strong>¿Dudas, o algo no funciona?</strong> Escríbenos en <a href="https://github.com/Brizna-Soft/CoopMinimap/issues">GitHub</a>. Por favor, no les preguntes por CoopMinimap a los autores de SSMP ni de Interactive Map: ellos no lo hicieron.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie-fila">
+      <p>© 2026 Brizna Soft</p>
+      <nav class="redes" aria-label="Redes">
+        <a href="https://github.com/Brizna-Soft">GitHub</a>
+        <a href="https://paypal.me/BriznaSoft">PayPal</a>
+      </nav>
+    </div>
+    <div class="contenedor">
+      <p class="creditos">CoopMinimap es un mod hecho por fans para Hollow Knight: Silksong; Team Cherry no lo hizo ni lo respalda. Hecho con ayuda de IA.</p>
+    </div>
+  </footer>
+</body>
+</html>
