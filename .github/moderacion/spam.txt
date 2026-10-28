@@ -1,0 +1,9 @@
+\b(casino|viagra|cialis|porno?|xxx|onlyfans|escorts?)\b
+\b(gana|ganar|ganá|genera|generar)\b.{0,20}\b(dinero|d[oó]lares|plata)\b
+\bairdrop\b
+\b(bitcoin|btc|usdt|cripto|crypto)\b.{0,40}\b(gratis|gana|ganar|inversi[oó]n|invierte|duplica)\b
+(^|[^a-z])t\.me/
+(^|[^a-z])wa\.me/
+\b(bit\.ly|tinyurl\.com|cutt\.ly|shorturl\.at|is\.gd)/
+\b(whatsapp|telegram)\b.{0,15}\+?[0-9][0-9 ()-]{7,}
+\b(crack|keygen|serial|activador)\b.{0,30}\b(gratis|descarga|download|aqu[ií])\b

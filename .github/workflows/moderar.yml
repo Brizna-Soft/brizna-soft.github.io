@@ -1,0 +1,60 @@
+# Filtro de comentarios: oculta solo los comentarios de las discusiones con insultos, spam o muchos enlaces.
+# Las palabras están en .github/moderacion. El texto se lee desde variables de entorno (nunca se pega en el
+# script), así nadie puede colar comandos dentro de un comentario.
+name: Moderar comentarios
+
+on:
+  discussion:
+    types: [created, edited]
+  discussion_comment:
+    types: [created, edited]
+
+permissions:
+  contents: read
+  discussions: write
+
+jobs:
+  revisar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          sparse-checkout: .github/moderacion
+
+      - name: Revisar el texto y ocultar lo que no va
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EVENTO: ${{ github.event_name }}
+          TEXTO_COMENTARIO: ${{ github.event.comment.body }}
+          TITULO_DISCUSION: ${{ github.event.discussion.title }}
+          TEXTO_DISCUSION: ${{ github.event.discussion.body }}
+          NODO_COMENTARIO: ${{ github.event.comment.node_id }}
+          NODO_DISCUSION: ${{ github.event.discussion.node_id }}
+          AUTOR_COMENTARIO: ${{ github.event.comment.user.login }}
+          AUTOR_DISCUSION: ${{ github.event.discussion.user.login }}
+        run: |
+          if [ "$EVENTO" = "discussion_comment" ]; then
+            texto="$TEXTO_COMENTARIO"; nodo="$NODO_COMENTARIO"; autor="$AUTOR_COMENTARIO"
+          else
+            texto="$TITULO_DISCUSION $TEXTO_DISCUSION"; nodo="$NODO_DISCUSION"; autor="$AUTOR_DISCUSION"
+          fi
+          if [ "$autor" = "Brizna-Soft" ]; then echo "Es de Brizna Soft."; exit 0; fi
+
+          motivo=""
+          if printf '%s' "$texto" | grep -qiwFf .github/moderacion/palabras.txt; then motivo="ABUSE"; fi
+          if printf '%s' "$texto" | grep -qiEf .github/moderacion/spam.txt; then motivo="SPAM"; fi
+          enlaces=$(printf '%s' "$texto" | grep -oiE 'https?://' | wc -l)
+          if [ "$enlaces" -ge 4 ]; then motivo="SPAM"; fi
+          if [ -z "$motivo" ]; then echo "Sin problemas."; exit 0; fi
+
+          echo "Se oculta por: $motivo"
+          if [ "$EVENTO" = "discussion_comment" ]; then
+            gh api graphql \
+              -f query='mutation($id:ID!,$c:ReportedContentClassifiers!){minimizeComment(input:{subjectId:$id,classifier:$c}){minimizedComment{isMinimized}}}' \
+              -f id="$nodo" -f c="$motivo"
+          else
+            # Una discusión no se puede ocultar: se cierra para que nadie más escriba ahí
+            gh api graphql \
+              -f query='mutation($id:ID!){lockLockable(input:{lockableId:$id,lockReason:SPAM}){lockedRecord{locked}}}' \
+              -f id="$nodo"
+          fi

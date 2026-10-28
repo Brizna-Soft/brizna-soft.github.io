@@ -181,6 +181,45 @@ h3 { margin: 0; font-size: 1.5rem; }
   box-shadow: var(--sombra);
 }
 
+.programa + .programa { margin-top: 28px; }
+.intro { margin: -12px 0 24px; color: var(--suave); max-width: 46em; }
+
+/* Nuestra promesa */
+.promesa-seccion { padding-top: 56px; }
+.promesa { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; margin: 0; padding: 0; list-style: none; }
+.promesa li { padding: 22px; border: 1px solid var(--borde); border-radius: var(--radio); background: var(--fondo); }
+.promesa strong { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; font-size: 1.1rem; }
+.promesa strong::before {
+  content: "";
+  flex: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--verde) 18%, var(--fondo));
+  border: 2px solid var(--verde);
+}
+.promesa span { color: var(--suave); font-size: 0.95rem; }
+
+/* Programas recomendados de otros */
+.recomendados { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin: 0; padding: 0; list-style: none; }
+.recomendados li { padding: 16px 18px; border: 1px solid var(--borde); border-radius: 12px; background: var(--fondo); }
+.recomendados a { display: block; margin-bottom: 4px; font-weight: 700; text-decoration: none; }
+.recomendados a:hover { text-decoration: underline; }
+.recomendados span { color: var(--suave); font-size: 0.92rem; }
+
+/* Misión */
+.mision p { max-width: 46em; font-size: 1.08rem; }
+
+/* Opina */
+.opina { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.opina h2 { margin-bottom: 8px; }
+.opina p { margin: 0 0 8px; color: var(--suave); max-width: 40em; }
+
+/* Página de texto (privacidad) */
+.texto-largo { max-width: 46em; }
+.texto-largo h2 { margin-top: 40px; font-size: 1.4rem; }
+.texto-largo li { margin: 6px 0; }
+
 /* Mods */
 .pronto {
   padding: 28px;
@@ -215,9 +254,15 @@ h3 { margin: 0; font-size: 1.5rem; }
 .redes a:hover { color: var(--texto); }
 .creditos { margin-top: 12px !important; }
 
+@media (max-width: 960px) {
+  .promesa, .recomendados { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 /* Celular */
 @media (max-width: 760px) {
   body { font-size: 16px; }
+  .promesa, .recomendados { grid-template-columns: 1fr; }
+  .opina { flex-direction: column; align-items: flex-start; }
   .menu { gap: 14px; }
   .menu a { font-size: 0.9rem; }
   .marca span { font-size: 1rem; }
@@ -226,6 +271,11 @@ h3 { margin: 0; font-size: 1.5rem; }
   .programa { grid-template-columns: 1fr; padding: 20px; gap: 24px; }
   .donar { flex-direction: column; align-items: flex-start; padding: 24px; }
   .botones .boton { flex: 1 1 auto; justify-content: center; }
+}
+
+@media (max-width: 560px) {
+  /* En pantallas angostas el menú solo lleva lo principal */
+  .menu a[href="#recomendados"], .menu a[href="#comentarios"] { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {

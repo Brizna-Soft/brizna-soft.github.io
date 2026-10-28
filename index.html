@@ -3,8 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Brizna Soft · Programas y mods gratis</title>
-  <meta name="description" content="Brizna Soft hace programas y mods gratis, sin publicidad. Baja HNTorrent, un cliente de BitTorrent liviano para Windows.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src https://api.github.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Brizna Soft · Programas gratis, sin publicidad</title>
+  <meta name="description" content="Brizna Soft junta en un solo lugar los programas básicos que todos necesitamos: gratis, sin publicidad, sin virus y con el código abierto. Baja Atarraya (descargas), HNTorrent y más.">
   <meta name="theme-color" content="#1D9E75">
   <link rel="icon" href="img/brizna-soft.svg" type="image/svg+xml">
   <link rel="stylesheet" href="estilos.css">
@@ -12,8 +14,8 @@
   <!-- Vista previa al compartir el enlace (WhatsApp, Telegram, Facebook...) -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Brizna Soft">
-  <meta property="og:title" content="Brizna Soft · Programas y mods gratis">
-  <meta property="og:description" content="Programas y mods gratis, sin publicidad. Baja HNTorrent para Windows.">
+  <meta property="og:title" content="Brizna Soft · Programas gratis, sin publicidad">
+  <meta property="og:description" content="Programas básicos para tu PC, gratis y con el código abierto. Sin virus, sin publicidad y sin recoger tus datos.">
   <meta property="og:url" content="https://brizna-soft.github.io/">
   <meta property="og:image" content="https://brizna-soft.github.io/img/compartir.png">
   <meta property="og:image:width" content="1200">
@@ -33,6 +35,8 @@
       <nav class="menu" aria-label="Secciones">
         <a href="#programas">Programas</a>
         <a href="#mods">Mods</a>
+        <a href="#recomendados">Recomendados</a>
+        <a href="#comentarios">Opina</a>
         <a href="#donar">Donar</a>
       </nav>
     </div>
@@ -41,27 +45,79 @@
   <main id="contenido">
     <section class="portada">
       <div class="contenedor">
-        <p class="etiqueta">Estudio independiente</p>
-        <h1>Programas y mods gratis, <span>sin publicidad.</span></h1>
-        <p class="entrada">En Brizna Soft hacemos herramientas para Windows y mods para juegos. Todo se baja gratis y se sostiene con donaciones.</p>
+        <p class="etiqueta">Hecho en Honduras · Código abierto</p>
+        <h1>Los programas que necesitas, <span>gratis y sin trampas.</span></h1>
+        <p class="entrada">Juntamos en un solo lugar los programas básicos para tu PC: gratis, sin publicidad, sin virus y sin recoger tus datos. Todo el código está en GitHub para que cualquiera lo revise.</p>
         <div class="botones">
-          <a class="boton principal" href="#hntorrent">Bajar HNTorrent</a>
+          <a class="boton principal" href="#programas">Ver los programas</a>
           <a class="boton" href="#donar">Apoyar el proyecto</a>
         </div>
       </div>
     </section>
 
-    <section id="programas" class="seccion">
+    <section class="seccion promesa-seccion" aria-labelledby="promesa">
+      <div class="contenedor">
+        <h2 id="promesa">Nuestra promesa</h2>
+        <ul class="promesa">
+          <li>
+            <strong>Sin virus</strong>
+            <span>Cada programa lo compila GitHub a partir de su código público, y publicamos su huella SHA-256 para que compruebes que es el original.</span>
+          </li>
+          <li>
+            <strong>Sin publicidad</strong>
+            <span>Ni anuncios, ni programas de más al instalar, ni suscripciones. Lo que bajas es lo que ves.</span>
+          </li>
+          <li>
+            <strong>Sin recoger tus datos</strong>
+            <span>No mandamos estadísticas ni sabemos qué haces. Los programas solo se conectan a internet cuando tú se lo pides.</span>
+          </li>
+          <li>
+            <strong>Código abierto</strong>
+            <span>Todo está en GitHub. Si algo falla, lo reportas y lo arreglamos a la vista de todos.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="programas" class="seccion alterna">
       <div class="contenedor">
         <h2>Programas</h2>
 
-        <article id="hntorrent" class="programa">
+        <article id="atarraya" class="programa" data-repo="Brizna-Soft/atarraya" data-zip="^Atarraya-\d+\.\d+\.\d+-x64\.zip$">
+          <div class="programa-info">
+            <div class="programa-titulo">
+              <img src="img/atarraya.svg" alt="" width="64" height="64">
+              <div>
+                <h3>Atarraya</h3>
+                <p class="version" data-version data-tipo="Gestor de descargas">Gestor de descargas · Windows 10 y 11 (64 bits)</p>
+              </div>
+            </div>
+            <p>Como la atarraya que se lanza y atrapa muchos peces de una vez: baja cada archivo en varias partes a la vez, y las descargas de tu navegador también.</p>
+            <ul class="lista">
+              <li>Hasta 16 conexiones por archivo, más rápido que el navegador.</li>
+              <li>Pausa y sigue después, aunque apagues la PC.</li>
+              <li>Toma las descargas de Chrome, Edge y Brave, de cualquier sitio.</li>
+              <li>Reintenta solo si se cae el internet. Límite de velocidad y cola.</li>
+            </ul>
+            <div class="botones">
+              <a class="boton principal" data-descargar href="https://github.com/Brizna-Soft/atarraya/releases/latest">Descargar para Windows</a>
+              <a class="enlace" href="https://github.com/Brizna-Soft/atarraya#conectar-con-el-navegador">Cómo conectarlo al navegador →</a>
+            </div>
+            <p class="nota">Descomprime el .zip y abre <code>Atarraya.exe</code>. <a href="https://github.com/Brizna-Soft/atarraya">Código</a> · <a href="https://github.com/Brizna-Soft/atarraya/issues/new/choose">Reportar un problema</a></p>
+          </div>
+          <figure class="programa-captura">
+            <img src="img/atarraya-captura.png" width="1040" height="640" loading="lazy"
+                 alt="Ventana de Atarraya bajando una imagen de Debian en 8 partes a la vez, con otra en pausa y dos terminadas">
+          </figure>
+        </article>
+
+        <article id="hntorrent" class="programa" data-repo="Brizna-Soft/hntorrent-descargas" data-zip="^HNTorrent-\d+\.\d+\.\d+-x64\.zip$">
           <div class="programa-info">
             <div class="programa-titulo">
               <img src="img/hntorrent.svg" alt="" width="64" height="64">
               <div>
                 <h3>HNTorrent</h3>
-                <p class="version" id="hnt-version">Windows 10 y 11 (64 bits)</p>
+                <p class="version" data-version data-tipo="BitTorrent">BitTorrent · Windows 10 y 11 (64 bits)</p>
               </div>
             </div>
             <p>Un cliente de BitTorrent liviano y fácil de usar, para bajar archivos sin anuncios ni programas extra.</p>
@@ -72,10 +128,10 @@
               <li>En español, con modo claro y oscuro.</li>
             </ul>
             <div class="botones">
-              <a class="boton principal" id="hnt-descargar" href="https://github.com/Brizna-Soft/hntorrent-descargas/releases/latest">Descargar para Windows</a>
+              <a class="boton principal" data-descargar href="https://github.com/Brizna-Soft/hntorrent-descargas/releases/latest">Descargar para Windows</a>
               <a class="enlace" href="https://github.com/Brizna-Soft/hntorrent-descargas/releases">Todas las versiones →</a>
             </div>
-            <p class="nota">Descomprime el .zip en una carpeta y abre <code>HNTorrent.exe</code>. Si no abre, instala el <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">Visual C++ de Microsoft</a>.</p>
+            <p class="nota">Descomprime el .zip y abre <code>HNTorrent.exe</code>. Si no abre, instala el <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">Visual C++ de Microsoft</a>. <a href="https://github.com/Brizna-Soft/hntorrent-descargas/issues/new/choose">Reportar un problema</a></p>
           </div>
           <figure class="programa-captura">
             <img src="img/hntorrent-captura.png" width="984" height="442" loading="lazy"
@@ -85,12 +141,63 @@
       </div>
     </section>
 
-    <section id="mods" class="seccion alterna">
+    <section id="mods" class="seccion">
       <div class="contenedor">
         <h2>Mods</h2>
-        <div class="pronto">
-          <p><strong>Pronto.</strong> Estamos terminando nuestros primeros mods. Cuando estén listos, los vas a poder bajar aquí.</p>
+        <article class="programa">
+          <div class="programa-info">
+            <div class="programa-titulo">
+              <div>
+                <h3>CoopMinimap</h3>
+                <p class="version">Mod para Hollow Knight: Silksong · beta</p>
+              </div>
+            </div>
+            <p>Un minimapa para jugar Silksong en cooperativo: ves a tu compañero en el mapa, te avisa cuando cae y te marca a dónde ir.</p>
+            <div class="botones">
+              <a class="boton principal" href="mods/coopminimap/">Ver el mod e instalarlo</a>
+            </div>
+          </div>
+          <figure class="programa-captura">
+            <img src="img/mods/coopminimap-partida.jpg" width="1600" height="915" loading="lazy"
+                 alt="Partida de Silksong en cooperativo con el minimapa de CoopMinimap en una esquina">
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <section id="recomendados" class="seccion alterna">
+      <div class="contenedor">
+        <h2>Programas buenos de otros</h2>
+        <p class="intro">No son nuestros, pero los recomendamos: son gratis, sin trampas y de código abierto. Bájalos siempre de su página oficial.</p>
+        <ul class="recomendados">
+          <li><a href="https://www.7-zip.org/">7-Zip</a><span>Comprime y descomprime ZIP, RAR, 7z y más.</span></li>
+          <li><a href="https://www.sumatrapdfreader.org/">SumatraPDF</a><span>Abre PDF y libros electrónicos, rápido y liviano.</span></li>
+          <li><a href="https://www.libreoffice.org/">LibreOffice</a><span>Documentos, hojas de cálculo y presentaciones, compatible con Office.</span></li>
+          <li><a href="https://www.videolan.org/vlc/">VLC</a><span>Reproduce casi cualquier video o música.</span></li>
+          <li><a href="https://www.gimp.org/">GIMP</a><span>Edita fotos e imágenes.</span></li>
+          <li><a href="https://krita.org/es/">Krita</a><span>Para dibujar y pintar.</span></li>
+          <li><a href="https://keepassxc.org/">KeePassXC</a><span>Guarda tus contraseñas de forma segura.</span></li>
+          <li><a href="https://www.firefox.com/es-ES/">Firefox</a><span>Navegador que cuida tu privacidad.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="mision" class="seccion">
+      <div class="contenedor mision">
+        <h2>Por qué hacemos esto</h2>
+        <p>Todos necesitamos alguna vez un programa gratis: para descomprimir un archivo, bajar algo, abrir un documento o arreglar la PC. Muchas veces lo que se encuentra trae anuncios, virus o pide una suscripción.</p>
+        <p>Nuestra misión es <strong>juntar en un solo lugar los programas básicos que la gente necesita</strong>, gratis y con el código libre en GitHub. Si la gente apoya, algún día podremos vivir de esto. Y si no, nuestros aportes quedan aquí igual, para quien los necesite.</p>
+      </div>
+    </section>
+
+    <section id="comentarios" class="seccion alterna">
+      <div class="contenedor opina">
+        <div>
+          <h2>Opina, pregunta o reporta</h2>
+          <p>¿Algo no funciona? Cada programa tiene su botón «Reportar un problema». Para ideas, preguntas o comentarios generales, escríbenos en nuestras discusiones de GitHub (se necesita una cuenta gratis).</p>
+          <p class="nota">Moderamos los comentarios: los insultos, el spam y los enlaces engañosos se ocultan solos.</p>
         </div>
+        <a class="boton principal" href="https://github.com/Brizna-Soft/brizna-soft.github.io/discussions">Ir a las discusiones</a>
       </div>
     </section>
 
@@ -98,7 +205,7 @@
       <div class="contenedor donar">
         <div>
           <h2>Apoya a Brizna Soft</h2>
-          <p>Todo lo que hacemos es gratis. Si te sirve, puedes ayudarnos a seguir con una donación por PayPal. Cualquier monto ayuda.</p>
+          <p>Todo lo que hacemos es gratis. Si te sirve, puedes ayudarnos a seguir con una donación por PayPal. Cualquier monto ayuda, y recomendarnos también.</p>
         </div>
         <a class="boton paypal" href="https://paypal.me/BriznaSoft">
           <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 20.3C6.4 16.2 3.3 12.9 3.3 9.1 3.3 6.4 5.4 4.3 8 4.3c1.7 0 3.1.9 4 2.3.9-1.4 2.3-2.3 4-2.3 2.6 0 4.7 2.1 4.7 4.8 0 3.8-3.1 7.1-8.7 11.2z" fill="currentColor"/></svg>
@@ -110,14 +217,15 @@
 
   <footer class="pie">
     <div class="contenedor pie-fila">
-      <p>© 2026 Brizna Soft</p>
-      <nav class="redes" aria-label="Redes">
+      <p>© 2026 Brizna Soft · Honduras</p>
+      <nav class="redes" aria-label="Enlaces">
         <a href="https://github.com/Brizna-Soft">GitHub</a>
         <a href="https://paypal.me/BriznaSoft">PayPal</a>
+        <a href="privacidad.html">Privacidad</a>
       </nav>
     </div>
     <div class="contenedor">
-      <p class="creditos">HNTorrent está basado en <a href="https://github.com/picotorrent/picotorrent">PicoTorrent</a> (licencia MIT) y usa <a href="https://libtorrent.org">libtorrent</a>. Hecho con ayuda de IA.</p>
+      <p class="creditos">HNTorrent está basado en <a href="https://github.com/picotorrent/picotorrent">PicoTorrent</a> (licencia MIT) y usa <a href="https://libtorrent.org">libtorrent</a>. Atarraya usa <a href="https://curl.se">curl</a> y <a href="https://www.wxwidgets.org">wxWidgets</a>. Hecho con ayuda de IA.</p>
     </div>
   </footer>
 
