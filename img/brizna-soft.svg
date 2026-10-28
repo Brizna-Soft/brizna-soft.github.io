@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-  <title>Brizna Soft</title>
+  <title>Brizna Soft: una b con una hoja</title>
   <rect width="64" height="64" rx="15" fill="#1D9E75"/>
-  <path d="M30 54C31 40 35 25 46 10C43 27 39 41 37 54Z" fill="#FFFFFF"/>
-  <path d="M23 54C23 46 20 39 14 32C21 36 26 44 28 54Z" fill="#FFFFFF" opacity="0.85"/>
-  <path d="M15 54h34" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+  <path d="M22 12v35" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="31.5" cy="38" r="9.5" fill="none" stroke="#FFFFFF" stroke-width="6"/>
+  <path d="M25 22c3-7 10-10 18-9c-3 7-10 10-18 9z" fill="#FFFFFF"/>
 </svg>
