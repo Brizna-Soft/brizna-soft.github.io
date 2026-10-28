@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src https://api.github.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://giscus.app; style-src 'self' https://giscus.app; img-src 'self' data:; connect-src https://api.github.com; frame-src https://giscus.app; object-src 'none'; base-uri 'self'; form-action 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Brizna Soft · Programas gratis, sin publicidad</title>
   <meta name="description" content="Brizna Soft junta en un solo lugar los programas básicos que todos necesitamos: gratis, sin publicidad, sin virus y con el código abierto. Baja Atarraya (descargas), HNTorrent y más.">
@@ -282,10 +282,29 @@
       <div class="contenedor opina">
         <div>
           <h2>Opina, pregunta o reporta</h2>
-          <p>¿Algo no funciona? Cada programa tiene su botón «Reportar un problema». Para ideas, preguntas o comentarios generales, escríbenos en nuestras discusiones de GitHub (se necesita una cuenta gratis).</p>
-          <p class="nota">Moderamos los comentarios: los insultos, el spam y los enlaces engañosos se ocultan solos.</p>
+          <p>¿Algo no funciona? Cada programa tiene su botón «Reportar un problema». Para ideas, preguntas o comentarios generales, escríbenos aquí abajo. Se entra con una cuenta gratis de GitHub.</p>
+          <p class="nota">Moderamos los comentarios: los insultos, el spam y los enlaces engañosos se ocultan solos. No pongas datos personales: los comentarios son públicos.</p>
         </div>
-        <a class="boton principal" href="https://github.com/Brizna-Soft/brizna-soft.github.io/discussions">Ir a las discusiones</a>
+        <a class="boton" href="https://github.com/Brizna-Soft/brizna-soft.github.io/discussions">Ver todas las discusiones</a>
+      </div>
+      <div class="contenedor comentarios-giscus">
+        <div class="giscus"></div>
+        <script src="https://giscus.app/client.js"
+                data-repo="Brizna-Soft/brizna-soft.github.io"
+                data-repo-id="R_kgDOVaDxjQ"
+                data-category="Announcements"
+                data-category-id="DIC_kwDOVaDxjc4DJzM8"
+                data-mapping="specific"
+                data-term="Comentarios de la página"
+                data-strict="1"
+                data-reactions-enabled="1"
+                data-emit-metadata="0"
+                data-input-position="top"
+                data-theme="preferred_color_scheme"
+                data-lang="es"
+                data-loading="lazy"
+                crossorigin="anonymous"
+                async></script>
       </div>
     </section>
 

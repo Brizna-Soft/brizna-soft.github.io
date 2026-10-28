@@ -215,6 +215,8 @@ h3 { margin: 0; font-size: 1.5rem; }
 .opina h2 { margin-bottom: 8px; }
 .opina p { margin: 0 0 8px; color: var(--suave); max-width: 40em; }
 
+.comentarios-giscus { margin-top: 28px; }
+
 /* Página de texto (privacidad) */
 .texto-largo { max-width: 46em; }
 .texto-largo h2 { margin-top: 40px; font-size: 1.4rem; }
