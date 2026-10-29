@@ -95,7 +95,7 @@ if ($html -notmatch '<!--PUBLICACIONES-->') {
 $seccion = ''
 if ($lista.Count) {
     $tarjetas = ($lista | Select-Object -First 6 | ForEach-Object { Tarjeta $_ '' }) -join "`n"
-    $seccion = [IO.File]::ReadAllText((Join-Path $aqui 'seccion.plantilla'), $utf8).Replace('{{TARJETAS}}', $tarjetas).TrimEnd() + "`n"
+    $seccion = ([IO.File]::ReadAllText((Join-Path $aqui 'seccion.plantilla'), $utf8).Replace('{{TARJETAS}}', $tarjetas) -replace "`r`n", "`n").TrimEnd() + "`n"
 }
 $html = [regex]::Replace($html, '(?s)<!--PUBLICACIONES-->.*?<!--/PUBLICACIONES-->', { param($m) "<!--PUBLICACIONES-->`n$seccion    <!--/PUBLICACIONES-->" })
 $cambioPortada = $html -cne $antesPortada
