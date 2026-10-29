@@ -1,0 +1,9 @@
+    <section id="publicaciones" class="seccion alterna">
+      <div class="contenedor">
+        <h2>Publicaciones</h2>
+        <div class="publicaciones">
+{{TARJETAS}}
+        </div>
+        <p class="nota"><a href="publicaciones/">Ver todas las publicaciones →</a></p>
+      </div>
+    </section>

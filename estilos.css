@@ -274,6 +274,30 @@ h3 { margin: 0; font-size: 1.5rem; }
   font-size: 0.95rem;
 }
 
+/* Publicaciones (las escribe el panel; ver .github/publicaciones) */
+.publicaciones { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.publicacion {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  background: var(--fondo);
+}
+.publicacion img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-bottom: 1px solid var(--borde);
+}
+.publicacion-texto { display: flex; flex: 1; flex-direction: column; padding: 18px 20px 20px; }
+.publicacion-texto h3 { margin: 6px 0 8px; font-size: 1.2rem; }
+.publicacion-texto p { margin: 0 0 16px; color: var(--suave); }
+.publicacion-texto .version { margin: 0; }
+.publicacion-texto .boton { align-self: flex-start; margin-top: auto; }
+
 /* Donar */
 .donar {
   display: flex;
@@ -299,13 +323,13 @@ h3 { margin: 0; font-size: 1.5rem; }
 .creditos { margin-top: 12px !important; }
 
 @media (max-width: 960px) {
-  .promesa, .recomendados { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .promesa, .recomendados, .publicaciones { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 /* Celular */
 @media (max-width: 760px) {
   body { font-size: 16px; }
-  .promesa, .recomendados { grid-template-columns: 1fr; }
+  .promesa, .recomendados, .publicaciones { grid-template-columns: 1fr; }
   .opina { flex-direction: column; align-items: flex-start; }
   .menu { gap: 14px; }
   .menu a { font-size: 0.9rem; }
