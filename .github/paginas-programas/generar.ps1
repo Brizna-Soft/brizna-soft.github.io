@@ -29,6 +29,12 @@ foreach ($p in $programas) {
     }
     $jsonld = "  <script type=`"application/ld+json`">" + ($datos | ConvertTo-Json -Depth 5 -Compress) + "</script>"
 
+    # Seccion opcional despues de "Como instalarlo" (por ejemplo, el aviso de VB-CABLE en Chachalaca)
+    $extra = ''; $claseOriginal = 'seccion alterna'
+    if ($p.extra_html) {
+        $extra = "`n`n    <section id=`"$($p.extra_id)`" class=`"seccion alterna`">`n      <div class=`"contenedor estrecho`">`n        <h2>$($p.extra_titulo)</h2>`n        $($p.extra_html)`n      </div>`n    </section>"
+        $claseOriginal = 'seccion'
+    }
     $items = ($p.items | ForEach-Object { "          <li>$_</li>" }) -join "`n"
     $pasos = ($p.pasos | ForEach-Object { "          <li>$_</li>" }) -join "`n"
     $html = $plantilla
@@ -39,6 +45,7 @@ foreach ($p in $programas) {
         'CAPTURA_ALT' = $p.captura_alt; 'REPO' = $p.repo; 'ZIP' = $p.zip; 'DESCARGA' = $p.descarga
         'TEXTO_BOTON' = $p.texto_boton; 'CODIGO' = $p.codigo; 'REPORTAR' = $p.reportar; 'ITEMS' = $items
         'PASOS' = $pasos; 'ORIGINAL' = $p.original; 'CREDITOS' = $p.creditos; 'JSONLD' = $jsonld
+        'EXTRA' = $extra; 'CLASE_ORIGINAL' = $claseOriginal
     }
     foreach ($k in $valores.Keys) { $html = $html.Replace("{{$k}}", $valores[$k]) }
     if ($html -match '\{\{[A-Z_]+\}\}') { throw "Quedo un hueco sin llenar en $($p.slug): $($Matches[0])" }

@@ -82,9 +82,9 @@
 {{PASOS}}
         </ol>
       </div>
-    </section>
+    </section>{{EXTRA}}
 
-    <section id="original" class="seccion alterna">
+    <section id="original" class="{{CLASE_ORIGINAL}}">
       <div class="contenedor estrecho">
         <h2>Cómo saber que es el original</h2>
         <p>{{ORIGINAL}}</p>
