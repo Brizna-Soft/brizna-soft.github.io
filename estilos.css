@@ -243,6 +243,37 @@ h3 { margin: 0; font-size: 1.5rem; }
 }
 .guia p, .guia .lista { max-width: 52em; }
 
+/* Página de un programa (programas/<nombre>/) */
+.icono-programa { display: block; margin: 0 auto 18px; border-radius: 18px; }
+.estrecho > * { max-width: 820px; }
+.captura-programa { margin: 0; }
+.captura-programa img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid var(--borde);
+  box-shadow: var(--sombra);
+}
+.captura-programa figcaption { margin-top: 10px; color: var(--suave); font-size: 0.92rem; }
+.pasos { counter-reset: paso; list-style: none; margin: 0; padding: 0; }
+.pasos > li { counter-increment: paso; position: relative; margin: 0 0 20px; padding-left: 48px; }
+.pasos > li::before {
+  content: counter(paso);
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--verde);
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
 /* Donar */
 .donar {
   display: flex;
@@ -255,6 +286,7 @@ h3 { margin: 0; font-size: 1.5rem; }
   border: 1px solid color-mix(in srgb, var(--verde) 30%, var(--borde));
 }
 .donar h2 { margin-bottom: 8px; }
+.donar .botones { margin-top: 0; flex-shrink: 0; }
 .donar p { margin: 0; color: var(--suave); max-width: 36em; }
 
 /* Pie */
@@ -282,6 +314,7 @@ h3 { margin: 0; font-size: 1.5rem; }
   .seccion { padding: 52px 0; }
   .programa { grid-template-columns: 1fr; padding: 20px; gap: 24px; }
   .guia { padding: 20px; }
+  .pasos > li { padding-left: 42px; }
   .donar { flex-direction: column; align-items: flex-start; padding: 24px; }
   .botones .boton { flex: 1 1 auto; justify-content: center; }
 }

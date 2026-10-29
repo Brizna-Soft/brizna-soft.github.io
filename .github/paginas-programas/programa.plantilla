@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>{{TITULO}}</title>
+  <meta name="description" content="{{DESCRIPCION}}">
+  <meta name="theme-color" content="#1D9E75">
+  <link rel="canonical" href="https://brizna-soft.github.io/programas/{{SLUG}}/">
+  <link rel="icon" href="../../img/brizna-soft.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../estilos.css">
+
+  <!-- Vista previa al compartir el enlace (WhatsApp, Telegram, Facebook...) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Brizna Soft">
+  <meta property="og:title" content="{{OG_TITULO}}">
+  <meta property="og:description" content="{{DESCRIPCION}}">
+  <meta property="og:url" content="https://brizna-soft.github.io/programas/{{SLUG}}/">
+  <meta property="og:image" content="https://brizna-soft.github.io/img/{{CAPTURA}}">
+  <meta property="og:image:width" content="{{CAPTURA_ANCHO}}">
+  <meta property="og:image:height" content="{{CAPTURA_ALTO}}">
+  <meta property="og:locale" content="es_LA">
+  <meta name="twitter:card" content="summary_large_image">
+{{JSONLD}}
+</head>
+<body>
+  <a class="saltar" href="#contenido">Ir al contenido</a>
+
+  <header class="cabecera">
+    <div class="contenedor cabecera-fila">
+      <a class="marca" href="../../">
+        <img src="../../img/brizna-soft.svg" alt="" width="32" height="32">
+        <span>Brizna Soft</span>
+      </a>
+      <nav class="menu" aria-label="Secciones">
+        <a href="../../#programas">Programas</a>
+        <a href="../../#mods">Mods</a>
+        <a href="../../#donar">Donar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="portada" data-repo="{{REPO}}" data-zip="{{ZIP}}">
+      <div class="contenedor">
+        <img class="icono-programa" src="../../img/{{ICONO}}" alt="" width="88" height="88">
+        <p class="etiqueta" data-version data-tipo="{{TIPO}}">{{TIPO}} · {{PLATAFORMA}}</p>
+        <h1>{{H1}}</h1>
+        <p class="entrada">{{ENTRADA}}</p>
+        <div class="botones">
+          <a class="boton principal" data-descargar href="{{DESCARGA}}">{{TEXTO_BOTON}}</a>
+          <a class="boton" href="#instalar">Cómo instalarlo</a>
+        </div>
+        <p class="nota">Gratis, sin publicidad y de código abierto · <a href="{{CODIGO}}">Código en GitHub</a></p>
+      </div>
+    </section>
+
+    <section class="seccion">
+      <div class="contenedor">
+        <figure class="captura-programa">
+          <img src="../../img/{{CAPTURA}}" width="{{CAPTURA_ANCHO}}" height="{{CAPTURA_ALTO}}" alt="{{CAPTURA_ALT}}">
+          <figcaption>{{CAPTURA_ALT}}</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="que-hace" class="seccion alterna">
+      <div class="contenedor estrecho">
+        <h2>Qué hace</h2>
+        <ul class="lista">
+{{ITEMS}}
+        </ul>
+      </div>
+    </section>
+
+    <section id="instalar" class="seccion">
+      <div class="contenedor estrecho">
+        <h2>Cómo instalarlo</h2>
+        <ol class="pasos">
+{{PASOS}}
+        </ol>
+      </div>
+    </section>
+
+    <section id="original" class="seccion alterna">
+      <div class="contenedor estrecho">
+        <h2>Cómo saber que es el original</h2>
+        <p>{{ORIGINAL}}</p>
+      </div>
+    </section>
+
+    <section class="seccion">
+      <div class="contenedor donar">
+        <div>
+          <h2>¿Algo no funciona?</h2>
+          <p>Cuéntanos en GitHub y lo arreglamos a la vista de todos. Si te sirve, también puedes apoyarnos con una donación.</p>
+        </div>
+        <div class="botones">
+          <a class="boton" href="{{REPORTAR}}">Reportar un problema</a>
+          <a class="boton paypal" href="https://paypal.me/BriznaSoft">Donar con PayPal</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie-fila">
+      <p>© 2026 Brizna Soft · Honduras</p>
+      <nav class="redes" aria-label="Enlaces">
+        <a href="https://github.com/Brizna-Soft">GitHub</a>
+        <a href="https://paypal.me/BriznaSoft">PayPal</a>
+        <a href="../../privacidad.html">Privacidad</a>
+      </nav>
+    </div>
+    <div class="contenedor">
+      <p class="creditos">{{CREDITOS}}Hecho con ayuda de IA.</p>
+    </div>
+  </footer>
+
+  <script src="../../app.js" defer></script>
+</body>
+</html>
