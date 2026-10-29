@@ -233,6 +233,16 @@ h3 { margin: 0; font-size: 1.5rem; }
 .pronto p { margin: 0; }
 .pronto strong { color: var(--texto); }
 
+/* Guía de un programa de otros, dentro de Mods */
+.guia {
+  margin-top: 28px;
+  padding: 32px;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  background: var(--fondo);
+}
+.guia p, .guia .lista { max-width: 52em; }
+
 /* Donar */
 .donar {
   display: flex;
@@ -271,6 +281,7 @@ h3 { margin: 0; font-size: 1.5rem; }
   .portada { padding: 64px 0 56px; }
   .seccion { padding: 52px 0; }
   .programa { grid-template-columns: 1fr; padding: 20px; gap: 24px; }
+  .guia { padding: 20px; }
   .donar { flex-direction: column; align-items: flex-start; padding: 24px; }
   .botones .boton { flex: 1 1 auto; justify-content: center; }
 }
