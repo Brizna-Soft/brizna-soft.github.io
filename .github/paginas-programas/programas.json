@@ -4,7 +4,7 @@
     "nombre": "Atarraya",
     "titulo": "Atarraya: gestor de descargas gratis para Windows · Brizna Soft",
     "og_titulo": "Atarraya: gestor de descargas gratis para Windows",
-    "descripcion": "Atarraya es un gestor de descargas gratis para Windows: baja cada archivo en hasta 16 partes a la vez, también torrents y enlaces magnet, junta tus enlaces en un recolector y toma las descargas de Chrome, Edge y Brave. Sin anuncios.",
+    "descripcion": "Atarraya es un gestor de descargas gratis para Windows: baja cada archivo en hasta 16 partes a la vez, también torrents y enlaces magnet, junta tus enlaces en un recolector, baja los videos de las páginas con un botón y toma las descargas de Chrome, Edge y Brave. Sin anuncios.",
     "tipo": "Gestor de descargas",
     "plataforma": "Windows 10 y 11 (64 bits)",
     "h1": "Atarraya, el gestor de descargas <span>gratis y sin anuncios.</span>",
@@ -24,6 +24,7 @@
       "Hasta 16 conexiones por archivo, más rápido que el navegador.",
       "Torrents y enlaces magnet, en el mismo programa.",
       "Recolector de enlaces: copia o pega muchos y mira el nombre y el tamaño antes de bajar. Recibe Click'n'Load.",
+      "Botón «Descargar este video» sobre los videos de las páginas. Sin YouTube ni videos protegidos.",
       "Toma las descargas de Chrome, Edge y Brave. Pausa y sigue después, aunque apagues la PC."
     ],
     "pasos": [
