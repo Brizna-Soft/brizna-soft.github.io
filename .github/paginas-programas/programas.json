@@ -38,6 +38,47 @@
     "so": "Windows 10, Windows 11"
   },
   {
+    "slug": "jicaro",
+    "nombre": "Jícaro",
+    "titulo": "Jícaro: descompresor gratis para Windows (ZIP, RAR, 7z) · Brizna Soft",
+    "og_titulo": "Jícaro: descompresor gratis para Windows",
+    "descripcion": "Jícaro abre y extrae ZIP, RAR, 7z, ISO y más, también los RAR en varias partes, gratis, en español y sin publicidad. Nunca escribe fuera de la carpeta que eliges.",
+    "tipo": "Descompresor",
+    "plataforma": "Windows 10 y 11 (64 bits)",
+    "h1": "Jícaro, el descompresor <span>gratis y sin anuncios.</span>",
+    "entrada": "Como el jícaro, el fruto hondureño que sirve de vasija: guarda y saca lo que traen tus archivos ZIP, RAR y 7z, también los RAR que bajan en varias partes.",
+    "icono": "jicaro.png",
+    "captura": "jicaro-captura.png",
+    "captura_ancho": 980,
+    "captura_alto": 600,
+    "captura_alt": "Ventana de Jícaro mostrando lo que trae un ZIP, listo para extraer",
+    "repo": "Brizna-Soft/jicaro",
+    "zip": "^Jicaro-\\d+\\.\\d+\\.\\d+-x64\\.zip$",
+    "descarga": "https://github.com/Brizna-Soft/jicaro/releases/latest",
+    "texto_boton": "Descargar para Windows",
+    "codigo": "https://github.com/Brizna-Soft/jicaro",
+    "reportar": "https://github.com/Brizna-Soft/jicaro/issues/new/choose",
+    "items": [
+      "Abre ZIP, RAR, 7z, ISO, TAR y más. Los ZIP con contraseña también.",
+      "Junta los RAR en varias partes (.part01.rar...) y te dice si falta alguna.",
+      "Nunca escribe fuera de la carpeta que eliges y frena los archivos tramposos.",
+      "«Extraer aquí» en el clic derecho, si lo activas en Ajustes."
+    ],
+    "pasos": [
+      "<strong>Baja el .zip</strong> con el botón «Descargar para Windows».",
+      "<strong>Descomprímelo:</strong> clic derecho sobre el archivo y «Extraer todo». No hace falta instalar nada.",
+      "<strong>Abre <code>Jicaro.exe</code>.</strong> Si Windows muestra «Windows protegió su PC», es porque el programa es nuevo y todavía no tiene firma digital: pulsa «Más información» y luego «Ejecutar de todas formas».",
+      "<strong>Arrastra un archivo a la ventana o pulsa «Abrir...».</strong> Si quieres «Extraer aquí» en el clic derecho, actívalo en Ajustes."
+    ],
+    "extra_id": "limites",
+    "extra_titulo": "Lo que todavía no hace",
+    "extra_html": "<p>Jícaro no abre los RAR ni los 7z con contraseña, porque la biblioteca que usa todavía no lo permite. Te lo dice claro, y para esos puedes usar 7-Zip. Los ZIP con contraseña sí los abre. Jícaro solo extrae: no crea archivos RAR.</p>",
+    "original": "Cada versión la arma GitHub a partir del código público, y junto a cada .zip publicamos su huella SHA-256 (el archivo que termina en <code>.sha256</code>). Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Si sale la misma huella, el archivo es el original.",
+    "creditos": "Jícaro usa <a href=\"https://libarchive.org\">libarchive</a> y <a href=\"https://www.wxwidgets.org\">wxWidgets</a>. ",
+    "categoria": "UtilitiesApplication",
+    "so": "Windows 10, Windows 11"
+  },
+  {
     "slug": "mapache",
     "nombre": "Mapache",
     "titulo": "Mapache: mira qué ocupa tu disco y limpia tu PC gratis · Brizna Soft",
