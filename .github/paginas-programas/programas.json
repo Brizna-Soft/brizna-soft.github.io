@@ -4,16 +4,16 @@
     "nombre": "Atarraya",
     "titulo": "Atarraya: gestor de descargas gratis para Windows · Brizna Soft",
     "og_titulo": "Atarraya: gestor de descargas gratis para Windows",
-    "descripcion": "Atarraya es un gestor de descargas gratis para Windows: baja cada archivo en hasta 16 partes a la vez, pausa y sigue después, y toma las descargas de Chrome, Edge y Brave. Sin anuncios.",
+    "descripcion": "Atarraya es un gestor de descargas gratis para Windows: baja cada archivo en hasta 16 partes a la vez, también torrents y enlaces magnet, junta tus enlaces en un recolector y toma las descargas de Chrome, Edge y Brave. Sin anuncios.",
     "tipo": "Gestor de descargas",
     "plataforma": "Windows 10 y 11 (64 bits)",
     "h1": "Atarraya, el gestor de descargas <span>gratis y sin anuncios.</span>",
-    "entrada": "Como la atarraya que se lanza y atrapa muchos peces de una vez: baja cada archivo en varias partes a la vez, y las descargas de tu navegador también.",
+    "entrada": "Como la atarraya que se lanza y atrapa muchos peces de una vez: baja cada archivo en varias partes a la vez, también torrents, y las descargas de tu navegador.",
     "icono": "atarraya.svg",
     "captura": "atarraya-captura.png",
-    "captura_ancho": 1040,
+    "captura_ancho": 1180,
     "captura_alto": 640,
-    "captura_alt": "Ventana de Atarraya bajando una imagen de Debian en 8 partes a la vez, con otra en pausa y dos terminadas",
+    "captura_alt": "Ventana de Atarraya bajando la imagen de Debian por torrent, con cinco videos de Internet Archive ya terminados",
     "repo": "Brizna-Soft/atarraya",
     "zip": "^Atarraya-\\d+\\.\\d+\\.\\d+-x64\\.zip$",
     "descarga": "https://github.com/Brizna-Soft/atarraya/releases/latest",
@@ -22,9 +22,9 @@
     "reportar": "https://github.com/Brizna-Soft/atarraya/issues/new/choose",
     "items": [
       "Hasta 16 conexiones por archivo, más rápido que el navegador.",
-      "Pausa y sigue después, aunque apagues la PC.",
-      "Toma las descargas de Chrome, Edge y Brave, de cualquier sitio.",
-      "Reintenta solo si se cae el internet. Límite de velocidad y cola."
+      "Torrents y enlaces magnet, en el mismo programa.",
+      "Recolector de enlaces: copia o pega muchos y mira el nombre y el tamaño antes de bajar. Recibe Click'n'Load.",
+      "Toma las descargas de Chrome, Edge y Brave. Pausa y sigue después, aunque apagues la PC."
     ],
     "pasos": [
       "<strong>Baja el .zip</strong> con el botón «Descargar para Windows».",
@@ -33,7 +33,7 @@
       "<strong>Conéctalo al navegador</strong> para que tome las descargas de Chrome, Edge y Brave: sigue <a href=\"https://github.com/Brizna-Soft/atarraya#conectar-con-el-navegador\">estos pasos</a>."
     ],
     "original": "Cada versión la arma GitHub a partir del código público, y junto a cada .zip publicamos su huella SHA-256 (el archivo que termina en <code>.sha256</code>). Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Si sale la misma huella, el archivo es el original.",
-    "creditos": "Atarraya usa <a href=\"https://curl.se\">curl</a> y <a href=\"https://www.wxwidgets.org\">wxWidgets</a>. ",
+    "creditos": "Atarraya usa <a href=\"https://curl.se\">curl</a>, <a href=\"https://libtorrent.org\">libtorrent</a> y <a href=\"https://www.wxwidgets.org\">wxWidgets</a>. ",
     "categoria": "UtilitiesApplication",
     "so": "Windows 10, Windows 11"
   },
