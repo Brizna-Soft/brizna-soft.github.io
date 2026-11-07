@@ -73,7 +73,7 @@
           <li>Abre ZIP, RAR, 7z, ISO, TAR y más, también los que tienen contraseña.</li>
           <li>Junta los archivos en varias partes (.part01.rar, .r00, .7z.001, .z01) y te dice si falta alguna.</li>
           <li>Te pide la contraseña y nunca prueba claves por su cuenta. Nunca escribe fuera de la carpeta que eliges.</li>
-          <li>«Extraer aquí» en el clic derecho, si lo activas en Ajustes.</li>
+          <li>«Extraer aquí» en el clic derecho: es opcional y se activa en Ajustes. Para quitarlo, desmarca la casilla o abre <code>Quitar-clic-derecho.bat</code>, que viene en el .zip.</li>
         </ul>
       </div>
     </section>
@@ -100,7 +100,7 @@
     <section id="original" class="seccion">
       <div class="contenedor estrecho">
         <h2>Cómo saber que es el original</h2>
-        <p>Cada versión la arma GitHub a partir del código público, y junto a cada .zip publicamos su huella SHA-256 (un código único que tiene cada archivo; está en el archivo que termina en <code>.sha256</code>). Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Si sale la misma huella, el archivo es el original.</p>
+        <p>Cada versión la arma GitHub a partir del código público, y junto a cada .zip publicamos su huella SHA-256 (un código único que tiene cada archivo; está en el archivo que termina en <code>.sha256</code>). Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Si sale la misma huella, el archivo es el original. Además, cada .zip tiene una atestación pública (una constancia de que lo armó GitHub con el código del repositorio). Se comprueba con la herramienta <code>gh</code> de GitHub: <code>gh attestation verify archivo.zip --repo Brizna-Soft/jicaro</code>.</p>
       </div>
     </section>
 

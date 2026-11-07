@@ -63,7 +63,7 @@
       "Abre ZIP, RAR, 7z, ISO, TAR y más, también los que tienen contraseña.",
       "Junta los archivos en varias partes (.part01.rar, .r00, .7z.001, .z01) y te dice si falta alguna.",
       "Te pide la contraseña y nunca prueba claves por su cuenta. Nunca escribe fuera de la carpeta que eliges.",
-      "«Extraer aquí» en el clic derecho, si lo activas en Ajustes."
+      "«Extraer aquí» en el clic derecho: es opcional y se activa en Ajustes. Para quitarlo, desmarca la casilla o abre <code>Quitar-clic-derecho.bat</code>, que viene en el .zip."
     ],
     "pasos": [
       "<strong>Baja el .zip</strong> con el botón «Descargar para Windows».",
@@ -74,7 +74,7 @@
     "extra_id": "limites",
     "extra_titulo": "Lo que todavía no hace",
     "extra_html": "<p>Jícaro solo extrae: no crea archivos RAR ni 7z. Para abrir un RAR o un 7z necesita el archivo <code>7z.dll</code>, que viene en el mismo .zip.</p>",
-    "original": "Cada versión la arma GitHub a partir del código público, y junto a cada .zip publicamos su huella SHA-256 (un código único que tiene cada archivo; está en el archivo que termina en <code>.sha256</code>). Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Si sale la misma huella, el archivo es el original.",
+    "original": "Cada versión la arma GitHub a partir del código público, y junto a cada .zip publicamos su huella SHA-256 (un código único que tiene cada archivo; está en el archivo que termina en <code>.sha256</code>). Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Si sale la misma huella, el archivo es el original. Además, cada .zip tiene una atestación pública (una constancia de que lo armó GitHub con el código del repositorio). Se comprueba con la herramienta <code>gh</code> de GitHub: <code>gh attestation verify archivo.zip --repo Brizna-Soft/jicaro</code>.",
     "creditos": "Jícaro usa <a href=\"https://www.7-zip.org\">7-Zip</a> (el motor <code>7z.dll</code>, de Igor Pavlov), <a href=\"https://libarchive.org\">libarchive</a> y <a href=\"https://www.wxwidgets.org\">wxWidgets</a>. ",
     "categoria": "UtilitiesApplication",
     "so": "Windows 10, Windows 11"
@@ -112,7 +112,7 @@
       "<strong>Abre <code>Mapache.exe</code>.</strong> Si Windows muestra «Windows protegió su PC», es porque el programa es nuevo y todavía no tiene firma digital (un sello de pago que Windows reconoce): pulsa «Más información» y luego «Ejecutar de todas formas».",
       "<strong>Elige una unidad y pulsa «Analizar».</strong> Mapache solo mira: no borra nada sin preguntarte."
     ],
-    "original": "Cada versión la arma GitHub a partir del código público, y junto a cada .zip publicamos su huella SHA-256 (un código único que tiene cada archivo; está en el archivo que termina en <code>.sha256</code>). Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Si sale la misma huella, el archivo es el original.",
+    "original": "Cada versión la arma GitHub a partir del código público, y junto a cada .zip publicamos su huella SHA-256 (un código único que tiene cada archivo; está en el archivo que termina en <code>.sha256</code>). Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Si sale la misma huella, el archivo es el original. Además, cada .zip tiene una atestación pública (una constancia de que lo armó GitHub con el código del repositorio). Se comprueba con la herramienta <code>gh</code> de GitHub: <code>gh attestation verify archivo.zip --repo Brizna-Soft/mapache</code>.",
     "creditos": "Mapache usa <a href=\"https://www.wxwidgets.org\">wxWidgets</a>. ",
     "categoria": "UtilitiesApplication",
     "so": "Windows 10, Windows 11"
@@ -150,7 +150,7 @@
       "<strong>Abre <code>Guara.exe</code>.</strong> Si Windows muestra «Windows protegió su PC», es porque el programa es nuevo y todavía no tiene firma digital (un sello de pago que Windows reconoce): pulsa «Más información» y luego «Ejecutar de todas formas».",
       "<strong>Lee lo que encontró.</strong> Si hay un problema, pulsa «Ver solución» para ver los pasos."
     ],
-    "original": "Cada versión la arma GitHub a partir del código público, y junto a cada .zip publicamos su huella SHA-256 (un código único que tiene cada archivo; está en el archivo que termina en <code>.sha256</code>). Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Si sale la misma huella, el archivo es el original.",
+    "original": "Cada versión la arma GitHub a partir del código público, y junto a cada .zip publicamos su huella SHA-256 (un código único que tiene cada archivo; está en el archivo que termina en <code>.sha256</code>). Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Si sale la misma huella, el archivo es el original. Además, cada .zip tiene una atestación pública (una constancia de que lo armó GitHub con el código del repositorio). Se comprueba con la herramienta <code>gh</code> de GitHub: <code>gh attestation verify archivo.zip --repo Brizna-Soft/guara</code>.",
     "creditos": "Guara usa <a href=\"https://www.wxwidgets.org\">wxWidgets</a>. ",
     "categoria": "UtilitiesApplication",
     "so": "Windows 10, Windows 11"
@@ -160,7 +160,7 @@
     "nombre": "Mosquitero",
     "titulo": "Mosquitero: bloqueador de anuncios gratis para Chrome, Edge y Brave · Brizna Soft",
     "og_titulo": "Mosquitero: bloqueador de anuncios gratis",
-    "descripcion": "Mosquitero es una extensión gratis que bloquea anuncios y rastreadores en Chrome, Edge y Brave, con las listas EasyList y EasyPrivacy. No manda nada a ningún lado.",
+    "descripcion": "Mosquitero es una extensión gratis que bloquea anuncios y rastreadores en Chrome, Edge y Brave, con las listas EasyList y EasyPrivacy. No manda tus datos a ningún lado.",
     "tipo": "Bloqueador de anuncios",
     "plataforma": "Chrome, Edge y Brave",
     "h1": "Mosquitero bloquea los anuncios <span>y los rastreadores.</span>",
@@ -180,7 +180,7 @@
       "Usa las listas EasyList, EasyPrivacy y EasyList en español.",
       "Oculta los huecos que dejan los anuncios.",
       "Un clic para apagarlo en un sitio que no funcione bien.",
-      "No manda nada a ningún lado: todo pasa dentro de tu navegador."
+      "Solo se conecta a internet si pulsas «Buscar actualización». Entonces le pregunta a GitHub cuál es la última versión, sin mandar nada tuyo. Los reportes llevan solo el nombre del sitio, nunca la dirección completa."
     ],
     "pasos": [
       "<strong>Baja el .zip</strong> con el botón «Descargar la extensión».",
@@ -190,7 +190,10 @@
       "<strong>Pulsa «Cargar descomprimida»</strong> (en Edge se llama «Cargar desempaquetada») y elige la carpeta del paso 2, la que tiene el archivo <code>manifest.json</code>.",
       "<strong>Listo.</strong> Para ver el ícono siempre, pulsa la pieza de rompecabezas de la barra y fija Mosquitero. Mientras no esté en las tiendas, el navegador puede avisar del modo de desarrollador: es normal."
     ],
-    "original": "Cada versión la arma GitHub a partir del código público, y junto a cada .zip publicamos su huella SHA-256 (un código único que tiene cada archivo; está en el archivo que termina en <code>.sha256</code>). Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Si sale la misma huella, el archivo es el original.",
+    "extra_id": "limites",
+    "extra_titulo": "Lo que no hace",
+    "extra_html": "<p>Mosquitero no quita los anuncios de YouTube ni cierra las ventanas de anuncios que se abren solas. En Firefox no sale el número sobre el ícono, pero bloquea igual.</p>",
+    "original": "Cada versión la arma GitHub a partir del código público, y junto a cada .zip publicamos su huella SHA-256 (un código único que tiene cada archivo; está en el archivo que termina en <code>.sha256</code>). Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Si sale la misma huella, el archivo es el original. Además, cada .zip tiene una atestación pública (una constancia de que lo armó GitHub con el código del repositorio). Se comprueba con la herramienta <code>gh</code> de GitHub: <code>gh attestation verify archivo.zip --repo Brizna-Soft/mosquitero</code>.",
     "creditos": "Mosquitero usa las listas de <a href=\"https://easylist.to\">EasyList</a>. ",
     "categoria": "BrowserApplication",
     "so": "Chrome, Edge, Brave"
@@ -260,7 +263,7 @@
       "13 efectos para tu voz en vivo: Grave, Aguda, Ardilla, Monstruo, Duende, Ratón, Caricatura, Robot, Autotune, Robot autotune, Eco, Radio y Cueva.",
       "Quita el ruido de fondo y, si quieres, calla tu micrófono cuando no hablas.",
       "Atajos de teclado que funcionan dentro de los juegos. La tecla Pausa detiene todos los sonidos.",
-      "Micrófono virtual incluido: VB-CABLE, de VB-Audio, se instala con un botón.",
+      "Micrófono virtual incluido: VB-CABLE, de VB-Audio, se instala con un botón. Pide permiso de administrador solo para eso.",
       "Sin publicidad, sin cuentas y sin recoger tus datos: solo se conecta a internet si buscas una actualización."
     ],
     "pasos": [
@@ -272,8 +275,8 @@
     ],
     "extra_id": "microfono-virtual",
     "extra_titulo": "El micrófono virtual es de VB-Audio",
-    "extra_html": "<p>Para que tus amigos te escuchen, Chachalaca usa <strong>VB-CABLE</strong>, el micrófono virtual de VB-Audio, que viene de <a href=\"https://vb-cable.com\">www.vb-cable.com</a>. Va dentro del .zip tal como lo publica VB-Audio, y se instala con un botón. VB-CABLE no es de Brizna Soft: es <strong>donationware</strong> (se baja gratis y cada quien da lo que quiera para apoyar a su autor), y toda ayuda es bienvenida. Si te sirve, <a href=\"https://vb-audio.com/Cable/\">apoya a su autor</a>.</p>",
-    "original": "Cada versión la arma GitHub a partir del código público, y junto a cada .zip publicamos su huella SHA-256 (un código único que tiene cada archivo; está en el archivo que termina en <code>.sha256</code>). Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Si sale la misma huella, el archivo es el original.",
+    "extra_html": "<p>Para que tus amigos te escuchen, Chachalaca usa <strong>VB-CABLE</strong>, el micrófono virtual de VB-Audio, que viene de <a href=\"https://vb-cable.com\">www.vb-cable.com</a>. Va dentro del .zip tal como lo publica VB-Audio, y se instala con un botón. VB-CABLE no es de Brizna Soft: es <strong>donationware</strong> (se baja gratis y cada quien da lo que quiera para apoyar a su autor), y toda ayuda es bienvenida. Si te sirve, <a href=\"https://vb-audio.com/Cable/\">apoya a su autor</a>.</p><p>Chachalaca pide permiso de administrador solo para instalar VB-CABLE, con el instalador oficial de VB-Audio, y solo si pulsas el botón.</p>",
+    "original": "Cada versión la arma GitHub a partir del código público, y junto a cada .zip publicamos su huella SHA-256 (un código único que tiene cada archivo; está en el archivo que termina en <code>.sha256</code>). Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Si sale la misma huella, el archivo es el original. Además, cada .zip tiene una atestación pública (una constancia de que lo armó GitHub con el código del repositorio). Se comprueba con la herramienta <code>gh</code> de GitHub: <code>gh attestation verify archivo.zip --repo Brizna-Soft/chachalaca</code>.",
     "creditos": "Chachalaca usa <a href=\"https://github.com/mackron/miniaudio\">miniaudio</a> y <a href=\"https://github.com/Signalsmith-Audio/signalsmith-stretch\">Signalsmith Stretch</a>, y trae <a href=\"https://vb-audio.com/Cable/\">VB-CABLE</a>, de VB-Audio. ",
     "categoria": "MultimediaApplication",
     "so": "Windows 10, Windows 11"

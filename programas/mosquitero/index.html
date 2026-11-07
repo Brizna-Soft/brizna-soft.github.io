@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Mosquitero: bloqueador de anuncios gratis para Chrome, Edge y Brave · Brizna Soft</title>
-  <meta name="description" content="Mosquitero es una extensión gratis que bloquea anuncios y rastreadores en Chrome, Edge y Brave, con las listas EasyList y EasyPrivacy. No manda nada a ningún lado.">
+  <meta name="description" content="Mosquitero es una extensión gratis que bloquea anuncios y rastreadores en Chrome, Edge y Brave, con las listas EasyList y EasyPrivacy. No manda tus datos a ningún lado.">
   <meta name="theme-color" content="#1D9E75">
   <link rel="canonical" href="https://brizna-soft.github.io/programas/mosquitero/">
   <link rel="icon" href="../../img/brizna-soft.svg" type="image/svg+xml">
@@ -16,14 +16,14 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Brizna Soft">
   <meta property="og:title" content="Mosquitero: bloqueador de anuncios gratis">
-  <meta property="og:description" content="Mosquitero es una extensión gratis que bloquea anuncios y rastreadores en Chrome, Edge y Brave, con las listas EasyList y EasyPrivacy. No manda nada a ningún lado.">
+  <meta property="og:description" content="Mosquitero es una extensión gratis que bloquea anuncios y rastreadores en Chrome, Edge y Brave, con las listas EasyList y EasyPrivacy. No manda tus datos a ningún lado.">
   <meta property="og:url" content="https://brizna-soft.github.io/programas/mosquitero/">
   <meta property="og:image" content="https://brizna-soft.github.io/img/mosquitero-captura.png">
   <meta property="og:image:width" content="1000">
   <meta property="og:image:height" content="620">
   <meta property="og:locale" content="es_LA">
   <meta name="twitter:card" content="summary_large_image">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Mosquitero","description":"Mosquitero es una extensión gratis que bloquea anuncios y rastreadores en Chrome, Edge y Brave, con las listas EasyList y EasyPrivacy. No manda nada a ningún lado.","url":"https://brizna-soft.github.io/programas/mosquitero/","image":"https://brizna-soft.github.io/img/mosquitero-captura.png","screenshot":"https://brizna-soft.github.io/img/mosquitero-captura.png","applicationCategory":"BrowserApplication","operatingSystem":"Chrome, Edge, Brave","downloadUrl":"https://github.com/Brizna-Soft/mosquitero/releases/latest","license":"https://opensource.org/licenses/MIT","isAccessibleForFree":true,"inLanguage":"es","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"Brizna Soft","url":"https://brizna-soft.github.io/"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Mosquitero","description":"Mosquitero es una extensión gratis que bloquea anuncios y rastreadores en Chrome, Edge y Brave, con las listas EasyList y EasyPrivacy. No manda tus datos a ningún lado.","url":"https://brizna-soft.github.io/programas/mosquitero/","image":"https://brizna-soft.github.io/img/mosquitero-captura.png","screenshot":"https://brizna-soft.github.io/img/mosquitero-captura.png","applicationCategory":"BrowserApplication","operatingSystem":"Chrome, Edge, Brave","downloadUrl":"https://github.com/Brizna-Soft/mosquitero/releases/latest","license":"https://opensource.org/licenses/MIT","isAccessibleForFree":true,"inLanguage":"es","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"Brizna Soft","url":"https://brizna-soft.github.io/"}}</script>
 </head>
 <body>
   <a class="saltar" href="#contenido">Ir al contenido</a>
@@ -73,7 +73,7 @@
           <li>Usa las listas EasyList, EasyPrivacy y EasyList en español.</li>
           <li>Oculta los huecos que dejan los anuncios.</li>
           <li>Un clic para apagarlo en un sitio que no funcione bien.</li>
-          <li>No manda nada a ningún lado: todo pasa dentro de tu navegador.</li>
+          <li>Solo se conecta a internet si pulsas «Buscar actualización». Entonces le pregunta a GitHub cuál es la última versión, sin mandar nada tuyo. Los reportes llevan solo el nombre del sitio, nunca la dirección completa.</li>
         </ul>
       </div>
     </section>
@@ -92,10 +92,17 @@
       </div>
     </section>
 
-    <section id="original" class="seccion alterna">
+    <section id="limites" class="seccion alterna">
+      <div class="contenedor estrecho">
+        <h2>Lo que no hace</h2>
+        <p>Mosquitero no quita los anuncios de YouTube ni cierra las ventanas de anuncios que se abren solas. En Firefox no sale el número sobre el ícono, pero bloquea igual.</p>
+      </div>
+    </section>
+
+    <section id="original" class="seccion">
       <div class="contenedor estrecho">
         <h2>Cómo saber que es el original</h2>
-        <p>Cada versión la arma GitHub a partir del código público, y junto a cada .zip publicamos su huella SHA-256 (un código único que tiene cada archivo; está en el archivo que termina en <code>.sha256</code>). Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Si sale la misma huella, el archivo es el original.</p>
+        <p>Cada versión la arma GitHub a partir del código público, y junto a cada .zip publicamos su huella SHA-256 (un código único que tiene cada archivo; está en el archivo que termina en <code>.sha256</code>). Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Si sale la misma huella, el archivo es el original. Además, cada .zip tiene una atestación pública (una constancia de que lo armó GitHub con el código del repositorio). Se comprueba con la herramienta <code>gh</code> de GitHub: <code>gh attestation verify archivo.zip --repo Brizna-Soft/mosquitero</code>.</p>
       </div>
     </section>
 

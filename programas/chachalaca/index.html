@@ -74,7 +74,7 @@
           <li>13 efectos para tu voz en vivo: Grave, Aguda, Ardilla, Monstruo, Duende, Ratón, Caricatura, Robot, Autotune, Robot autotune, Eco, Radio y Cueva.</li>
           <li>Quita el ruido de fondo y, si quieres, calla tu micrófono cuando no hablas.</li>
           <li>Atajos de teclado que funcionan dentro de los juegos. La tecla Pausa detiene todos los sonidos.</li>
-          <li>Micrófono virtual incluido: VB-CABLE, de VB-Audio, se instala con un botón.</li>
+          <li>Micrófono virtual incluido: VB-CABLE, de VB-Audio, se instala con un botón. Pide permiso de administrador solo para eso.</li>
           <li>Sin publicidad, sin cuentas y sin recoger tus datos: solo se conecta a internet si buscas una actualización.</li>
         </ul>
       </div>
@@ -96,14 +96,14 @@
     <section id="microfono-virtual" class="seccion alterna">
       <div class="contenedor estrecho">
         <h2>El micrófono virtual es de VB-Audio</h2>
-        <p>Para que tus amigos te escuchen, Chachalaca usa <strong>VB-CABLE</strong>, el micrófono virtual de VB-Audio, que viene de <a href="https://vb-cable.com">www.vb-cable.com</a>. Va dentro del .zip tal como lo publica VB-Audio, y se instala con un botón. VB-CABLE no es de Brizna Soft: es <strong>donationware</strong> (se baja gratis y cada quien da lo que quiera para apoyar a su autor), y toda ayuda es bienvenida. Si te sirve, <a href="https://vb-audio.com/Cable/">apoya a su autor</a>.</p>
+        <p>Para que tus amigos te escuchen, Chachalaca usa <strong>VB-CABLE</strong>, el micrófono virtual de VB-Audio, que viene de <a href="https://vb-cable.com">www.vb-cable.com</a>. Va dentro del .zip tal como lo publica VB-Audio, y se instala con un botón. VB-CABLE no es de Brizna Soft: es <strong>donationware</strong> (se baja gratis y cada quien da lo que quiera para apoyar a su autor), y toda ayuda es bienvenida. Si te sirve, <a href="https://vb-audio.com/Cable/">apoya a su autor</a>.</p><p>Chachalaca pide permiso de administrador solo para instalar VB-CABLE, con el instalador oficial de VB-Audio, y solo si pulsas el botón.</p>
       </div>
     </section>
 
     <section id="original" class="seccion">
       <div class="contenedor estrecho">
         <h2>Cómo saber que es el original</h2>
-        <p>Cada versión la arma GitHub a partir del código público, y junto a cada .zip publicamos su huella SHA-256 (un código único que tiene cada archivo; está en el archivo que termina en <code>.sha256</code>). Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Si sale la misma huella, el archivo es el original.</p>
+        <p>Cada versión la arma GitHub a partir del código público, y junto a cada .zip publicamos su huella SHA-256 (un código único que tiene cada archivo; está en el archivo que termina en <code>.sha256</code>). Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Si sale la misma huella, el archivo es el original. Además, cada .zip tiene una atestación pública (una constancia de que lo armó GitHub con el código del repositorio). Se comprueba con la herramienta <code>gh</code> de GitHub: <code>gh attestation verify archivo.zip --repo Brizna-Soft/chachalaca</code>.</p>
       </div>
     </section>
 
