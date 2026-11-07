@@ -367,6 +367,18 @@ h3 { margin: 0; font-size: 1.5rem; }
 }
 .aviso-windows p { margin: 0; }
 .aviso-windows p + p { margin-top: 8px; color: var(--suave); font-size: 0.95rem; }
+.bloqueo {
+  margin: 28px 0 0;
+  padding: 16px 20px;
+  border: 1px solid color-mix(in srgb, var(--verde) 30%, var(--borde));
+  border-left: 5px solid var(--verde);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--verde) 10%, var(--fondo));
+}
+.bloqueo p { margin: 0 0 8px; }
+.bloqueo ul { margin: 0 0 8px; padding-left: 1.2em; }
+.bloqueo li { margin-bottom: 6px; }
+.bloqueo > :last-child { margin-bottom: 0; }
 .glosario {
   margin-top: 28px;
   padding: 16px 20px;

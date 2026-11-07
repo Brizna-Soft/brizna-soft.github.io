@@ -80,7 +80,7 @@
         <h2>Cómo instalarlo</h2>
         <ol class="pasos">
 {{PASOS}}
-        </ol>
+        </ol>{{BLOQUEO}}
       </div>
     </section>{{EXTRA}}
 

@@ -87,6 +87,16 @@
           <li><strong>Abre <code>Jicaro.exe</code>.</strong> Si Windows muestra «Windows protegió su PC», es porque el programa es nuevo y todavía no tiene firma digital (un sello de pago que Windows reconoce): pulsa «Más información» y luego «Ejecutar de todas formas».</li>
           <li><strong>Arrastra un archivo a la ventana o pulsa «Abrir...».</strong> Si quieres «Extraer aquí» en el clic derecho, actívalo en Ajustes.</li>
         </ol>
+
+        <div class="bloqueo" id="bloqueo">
+          <p><strong>Si Windows no deja abrir el programa</strong></p>
+          <p>Nuestros programas todavía no tienen firma digital, y por eso Windows puede frenarlos de dos maneras:</p>
+          <ul>
+            <li><strong>«Windows protegió su PC» (SmartScreen).</strong> Pulsa «Más información» y después «Ejecutar de todas formas».</li>
+            <li><strong>«Control inteligente de aplicaciones».</strong> Si lo tienes activado, puede bloquear el programa sin darte la opción de abrirlo igual. Microsoft explica que no se puede permitir un solo programa: la única salida es apagar esa protección en Seguridad de Windows &gt; Control de aplicaciones y exploradores. Es tu decisión; con Windows al día se puede volver a encender después. (<a href="https://support.microsoft.com/es-es/topic/smart-app-control-frequently-asked-questions-285ea03d-fa88-4d56-882e-6698afdb7003">Fuente: preguntas frecuentes de Microsoft</a>)</li>
+          </ul>
+          <p>Estamos preparando la firma digital para que esto deje de pasar. Mientras tanto, puedes comprobar que el archivo es el original con su huella SHA-256 y, en las versiones nuevas, con <code>gh attestation verify</code> (mira «Cómo saber que es el original», más abajo).</p>
+        </div>
       </div>
     </section>
 

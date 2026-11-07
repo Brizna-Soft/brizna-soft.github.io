@@ -35,6 +35,11 @@ foreach ($p in $programas) {
         $extra = "`n`n    <section id=`"$($p.extra_id)`" class=`"seccion alterna`">`n      <div class=`"contenedor estrecho`">`n        <h2>$($p.extra_titulo)</h2>`n        $($p.extra_html)`n      </div>`n    </section>"
         $claseOriginal = 'seccion'
     }
+    # Aviso del bloqueo de Windows (SmartScreen y Control inteligente de aplicaciones): solo para los que son .exe, no para extensiones del navegador
+    $bloqueo = ''
+    if ($p.categoria -ne 'BrowserApplication') {
+        $bloqueo = "`n`n" + [IO.File]::ReadAllText((Join-Path $aqui 'bloqueo.plantilla'), $utf8)
+    }
     $items = ($p.items | ForEach-Object { "          <li>$_</li>" }) -join "`n"
     $pasos = ($p.pasos | ForEach-Object { "          <li>$_</li>" }) -join "`n"
     $html = $plantilla
@@ -45,7 +50,7 @@ foreach ($p in $programas) {
         'CAPTURA_ALT' = $p.captura_alt; 'REPO' = $p.repo; 'ZIP' = $p.zip; 'DESCARGA' = $p.descarga
         'TEXTO_BOTON' = $p.texto_boton; 'CODIGO' = $p.codigo; 'REPORTAR' = $p.reportar; 'ITEMS' = $items
         'PASOS' = $pasos; 'ORIGINAL' = $p.original; 'CREDITOS' = $p.creditos; 'JSONLD' = $jsonld
-        'EXTRA' = $extra; 'CLASE_ORIGINAL' = $claseOriginal
+        'EXTRA' = $extra; 'CLASE_ORIGINAL' = $claseOriginal; 'BLOQUEO' = $bloqueo.TrimEnd("`r", "`n")
     }
     foreach ($k in $valores.Keys) { $html = $html.Replace("{{$k}}", $valores[$k]) }
     if ($html -match '\{\{[A-Z_]+\}\}') { throw "Quedo un hueco sin llenar en $($p.slug): $($Matches[0])" }
