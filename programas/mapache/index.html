@@ -84,7 +84,7 @@
         <ol class="pasos">
           <li><strong>Baja el .zip</strong> con el botón «Descargar para Windows».</li>
           <li><strong>Descomprímelo:</strong> clic derecho sobre el archivo y «Extraer todo». No hace falta instalar nada.</li>
-          <li><strong>Abre <code>Mapache.exe</code>.</strong> Si Windows muestra «Windows protegió su PC», es porque el programa es nuevo y todavía no tiene firma digital: pulsa «Más información» y luego «Ejecutar de todas formas».</li>
+          <li><strong>Abre <code>Mapache.exe</code>.</strong> Si Windows muestra «Windows protegió su PC», es porque el programa es nuevo y todavía no tiene firma digital (un sello de pago que Windows reconoce): pulsa «Más información» y luego «Ejecutar de todas formas».</li>
           <li><strong>Elige una unidad y pulsa «Analizar».</strong> Mapache solo mira: no borra nada sin preguntarte.</li>
         </ol>
       </div>
@@ -93,7 +93,7 @@
     <section id="original" class="seccion alterna">
       <div class="contenedor estrecho">
         <h2>Cómo saber que es el original</h2>
-        <p>Cada versión la arma GitHub a partir del código público, y junto a cada .zip publicamos su huella SHA-256 (el archivo que termina en <code>.sha256</code>). Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Si sale la misma huella, el archivo es el original.</p>
+        <p>Cada versión la arma GitHub a partir del código público, y junto a cada .zip publicamos su huella SHA-256 (un código único que tiene cada archivo; está en el archivo que termina en <code>.sha256</code>). Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Si sale la misma huella, el archivo es el original.</p>
       </div>
     </section>
 

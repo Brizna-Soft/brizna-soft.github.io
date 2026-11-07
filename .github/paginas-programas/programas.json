@@ -22,18 +22,18 @@
     "reportar": "https://github.com/Brizna-Soft/atarraya/issues/new/choose",
     "items": [
       "Hasta 16 conexiones por archivo, más rápido que el navegador.",
-      "Torrents y enlaces magnet, en el mismo programa.",
-      "Recolector de enlaces: copia o pega muchos y mira el nombre y el tamaño antes de bajar. Recibe Click'n'Load.",
+      "Torrents y enlaces magnet (un enlace que baja un torrent), en el mismo programa.",
+      "Recolector de enlaces: copia o pega muchos y mira el nombre y el tamaño antes de bajar. Recibe Click'n'Load (el botón con que algunos sitios mandan sus enlaces a un gestor de descargas).",
       "Botón «Descargar este video» sobre los videos de las páginas. Sin YouTube ni videos protegidos.",
       "Toma las descargas de Chrome, Edge y Brave. Pausa y sigue después, aunque apagues la PC."
     ],
     "pasos": [
       "<strong>Baja el .zip</strong> con el botón «Descargar para Windows».",
       "<strong>Descomprímelo:</strong> clic derecho sobre el archivo y «Extraer todo». No hace falta instalar nada.",
-      "<strong>Abre <code>Atarraya.exe</code>.</strong> Si Windows muestra «Windows protegió su PC», es porque el programa es nuevo y todavía no tiene firma digital: pulsa «Más información» y luego «Ejecutar de todas formas».",
+      "<strong>Abre <code>Atarraya.exe</code>.</strong> Si Windows muestra «Windows protegió su PC», es porque el programa es nuevo y todavía no tiene firma digital (un sello de pago que Windows reconoce): pulsa «Más información» y luego «Ejecutar de todas formas».",
       "<strong>Conéctalo al navegador</strong> para que tome las descargas de Chrome, Edge y Brave: sigue <a href=\"https://github.com/Brizna-Soft/atarraya#conectar-con-el-navegador\">estos pasos</a>."
     ],
-    "original": "Cada versión la arma GitHub a partir del código público, y junto a cada .zip publicamos su huella SHA-256 (el archivo que termina en <code>.sha256</code>). Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Si sale la misma huella, el archivo es el original.",
+    "original": "Cada versión la arma GitHub a partir del código público, y junto a cada .zip publicamos su huella SHA-256 (un código único que tiene cada archivo; está en el archivo que termina en <code>.sha256</code>). Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Si sale la misma huella, el archivo es el original.",
     "creditos": "Atarraya usa <a href=\"https://curl.se\">curl</a>, <a href=\"https://libtorrent.org\">libtorrent</a> y <a href=\"https://www.wxwidgets.org\">wxWidgets</a>. ",
     "categoria": "UtilitiesApplication",
     "so": "Windows 10, Windows 11"
@@ -68,13 +68,13 @@
     "pasos": [
       "<strong>Baja el .zip</strong> con el botón «Descargar para Windows».",
       "<strong>Descomprímelo:</strong> clic derecho sobre el archivo y «Extraer todo». No hace falta instalar nada.",
-      "<strong>Abre <code>Jicaro.exe</code>.</strong> Si Windows muestra «Windows protegió su PC», es porque el programa es nuevo y todavía no tiene firma digital: pulsa «Más información» y luego «Ejecutar de todas formas».",
+      "<strong>Abre <code>Jicaro.exe</code>.</strong> Si Windows muestra «Windows protegió su PC», es porque el programa es nuevo y todavía no tiene firma digital (un sello de pago que Windows reconoce): pulsa «Más información» y luego «Ejecutar de todas formas».",
       "<strong>Arrastra un archivo a la ventana o pulsa «Abrir...».</strong> Si quieres «Extraer aquí» en el clic derecho, actívalo en Ajustes."
     ],
     "extra_id": "limites",
     "extra_titulo": "Lo que todavía no hace",
     "extra_html": "<p>Jícaro no abre los RAR ni los 7z con contraseña, porque la biblioteca que usa todavía no lo permite. Te lo dice claro, y para esos puedes usar 7-Zip. Los ZIP con contraseña sí los abre. Jícaro solo extrae: no crea archivos RAR.</p>",
-    "original": "Cada versión la arma GitHub a partir del código público, y junto a cada .zip publicamos su huella SHA-256 (el archivo que termina en <code>.sha256</code>). Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Si sale la misma huella, el archivo es el original.",
+    "original": "Cada versión la arma GitHub a partir del código público, y junto a cada .zip publicamos su huella SHA-256 (un código único que tiene cada archivo; está en el archivo que termina en <code>.sha256</code>). Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Si sale la misma huella, el archivo es el original.",
     "creditos": "Jícaro usa <a href=\"https://libarchive.org\">libarchive</a> y <a href=\"https://www.wxwidgets.org\">wxWidgets</a>. ",
     "categoria": "UtilitiesApplication",
     "so": "Windows 10, Windows 11"
@@ -109,10 +109,10 @@
     "pasos": [
       "<strong>Baja el .zip</strong> con el botón «Descargar para Windows».",
       "<strong>Descomprímelo:</strong> clic derecho sobre el archivo y «Extraer todo». No hace falta instalar nada.",
-      "<strong>Abre <code>Mapache.exe</code>.</strong> Si Windows muestra «Windows protegió su PC», es porque el programa es nuevo y todavía no tiene firma digital: pulsa «Más información» y luego «Ejecutar de todas formas».",
+      "<strong>Abre <code>Mapache.exe</code>.</strong> Si Windows muestra «Windows protegió su PC», es porque el programa es nuevo y todavía no tiene firma digital (un sello de pago que Windows reconoce): pulsa «Más información» y luego «Ejecutar de todas formas».",
       "<strong>Elige una unidad y pulsa «Analizar».</strong> Mapache solo mira: no borra nada sin preguntarte."
     ],
-    "original": "Cada versión la arma GitHub a partir del código público, y junto a cada .zip publicamos su huella SHA-256 (el archivo que termina en <code>.sha256</code>). Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Si sale la misma huella, el archivo es el original.",
+    "original": "Cada versión la arma GitHub a partir del código público, y junto a cada .zip publicamos su huella SHA-256 (un código único que tiene cada archivo; está en el archivo que termina en <code>.sha256</code>). Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Si sale la misma huella, el archivo es el original.",
     "creditos": "Mapache usa <a href=\"https://www.wxwidgets.org\">wxWidgets</a>. ",
     "categoria": "UtilitiesApplication",
     "so": "Windows 10, Windows 11"
@@ -147,10 +147,10 @@
     "pasos": [
       "<strong>Baja el .zip</strong> con el botón «Descargar para Windows».",
       "<strong>Descomprímelo:</strong> clic derecho sobre el archivo y «Extraer todo». No hace falta instalar nada.",
-      "<strong>Abre <code>Guara.exe</code>.</strong> Si Windows muestra «Windows protegió su PC», es porque el programa es nuevo y todavía no tiene firma digital: pulsa «Más información» y luego «Ejecutar de todas formas».",
+      "<strong>Abre <code>Guara.exe</code>.</strong> Si Windows muestra «Windows protegió su PC», es porque el programa es nuevo y todavía no tiene firma digital (un sello de pago que Windows reconoce): pulsa «Más información» y luego «Ejecutar de todas formas».",
       "<strong>Lee lo que encontró.</strong> Si hay un problema, pulsa «Ver solución» para ver los pasos."
     ],
-    "original": "Cada versión la arma GitHub a partir del código público, y junto a cada .zip publicamos su huella SHA-256 (el archivo que termina en <code>.sha256</code>). Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Si sale la misma huella, el archivo es el original.",
+    "original": "Cada versión la arma GitHub a partir del código público, y junto a cada .zip publicamos su huella SHA-256 (un código único que tiene cada archivo; está en el archivo que termina en <code>.sha256</code>). Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Si sale la misma huella, el archivo es el original.",
     "creditos": "Guara usa <a href=\"https://www.wxwidgets.org\">wxWidgets</a>. ",
     "categoria": "UtilitiesApplication",
     "so": "Windows 10, Windows 11"
@@ -190,7 +190,7 @@
       "<strong>Pulsa «Cargar descomprimida»</strong> (en Edge se llama «Cargar desempaquetada») y elige la carpeta del paso 2, la que tiene el archivo <code>manifest.json</code>.",
       "<strong>Listo.</strong> Para ver el ícono siempre, pulsa la pieza de rompecabezas de la barra y fija Mosquitero. Mientras no esté en las tiendas, el navegador puede avisar del modo de desarrollador: es normal."
     ],
-    "original": "Cada versión la arma GitHub a partir del código público, y junto a cada .zip publicamos su huella SHA-256 (el archivo que termina en <code>.sha256</code>). Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Si sale la misma huella, el archivo es el original.",
+    "original": "Cada versión la arma GitHub a partir del código público, y junto a cada .zip publicamos su huella SHA-256 (un código único que tiene cada archivo; está en el archivo que termina en <code>.sha256</code>). Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Si sale la misma huella, el archivo es el original.",
     "creditos": "Mosquitero usa las listas de <a href=\"https://easylist.to\">EasyList</a>. ",
     "categoria": "BrowserApplication",
     "so": "Chrome, Edge, Brave"
@@ -226,8 +226,8 @@
     "pasos": [
       "<strong>Baja el .zip</strong> con el botón «Descargar para Windows».",
       "<strong>Descomprímelo:</strong> clic derecho sobre el archivo y «Extraer todo». No hace falta instalar nada.",
-      "<strong>Abre <code>HNTorrent.exe</code>.</strong> Si Windows muestra «Windows protegió su PC», es porque el programa es nuevo y todavía no tiene firma digital: pulsa «Más información» y luego «Ejecutar de todas formas».",
-      "<strong>Si no abre</strong>, instala el <a href=\"https://aka.ms/vs/17/release/vc_redist.x64.exe\">Visual C++ de Microsoft</a> y vuelve a abrirlo."
+      "<strong>Abre <code>HNTorrent.exe</code>.</strong> Si Windows muestra «Windows protegió su PC», es porque el programa es nuevo y todavía no tiene firma digital (un sello de pago que Windows reconoce): pulsa «Más información» y luego «Ejecutar de todas formas».",
+      "<strong>Si no abre</strong>, instala el <a href=\"https://aka.ms/vs/17/release/vc_redist.x64.exe\">Visual C++ de Microsoft</a> (un componente gratis de Windows que algunos programas necesitan) y vuelve a abrirlo."
     ],
     "original": "Cada versión la arma GitHub a partir del código público. Sus huellas SHA-256 están en el archivo <code>SHA256SUMS.txt</code> de cada versión. Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Además, HNTorrent comprueba la firma de cada actualización antes de instalarla.",
     "creditos": "HNTorrent está basado en <a href=\"https://github.com/picotorrent/picotorrent\">PicoTorrent</a> (licencia MIT) y usa <a href=\"https://libtorrent.org\">libtorrent</a>. ",
@@ -265,15 +265,15 @@
     ],
     "pasos": [
       "<strong>Baja el .zip</strong> con el botón «Descargar para Windows».",
-      "<strong>Descomprímelo</strong> (clic derecho y «Extraer todo») y abre <code>Chachalaca.exe</code>. No hay que instalarlo. Si Windows muestra «Windows protegió su PC», es porque el programa es nuevo y todavía no tiene firma digital: pulsa «Más información» y luego «Ejecutar de todas formas».",
+      "<strong>Descomprímelo</strong> (clic derecho y «Extraer todo») y abre <code>Chachalaca.exe</code>. No hay que instalarlo. Si Windows muestra «Windows protegió su PC», es porque el programa es nuevo y todavía no tiene firma digital (un sello de pago que Windows reconoce): pulsa «Más información» y luego «Ejecutar de todas formas».",
       "<strong>Si falta el micrófono virtual</strong>, pulsa «Instalar el micrófono virtual» y acepta los avisos de Windows. Si después dejas de oír tus juegos, Chachalaca te abre la página de Sonido para que elijas otra vez tus audífonos.",
       "<strong>En Discord:</strong> Ajustes de usuario → Voz y video → Dispositivo de entrada → <strong>CABLE Output</strong>. Pon «Supresión de ruido» en <strong>Ninguna</strong>; si no, Discord borra los sonidos.",
       "<strong>En tu juego:</strong> en las opciones de chat de voz, elige <strong>CABLE Output</strong> como micrófono."
     ],
     "extra_id": "microfono-virtual",
     "extra_titulo": "El micrófono virtual es de VB-Audio",
-    "extra_html": "<p>Para que tus amigos te escuchen, Chachalaca usa <strong>VB-CABLE</strong>, el micrófono virtual de VB-Audio, que viene de <a href=\"https://vb-cable.com\">www.vb-cable.com</a>. Va dentro del .zip tal como lo publica VB-Audio, y se instala con un botón. VB-CABLE no es de Brizna Soft: es <strong>donationware</strong>, y toda ayuda es bienvenida. Si te sirve, <a href=\"https://vb-audio.com/Cable/\">apoya a su autor</a>.</p>",
-    "original": "Cada versión la arma GitHub a partir del código público, y junto a cada .zip publicamos su huella SHA-256 (el archivo que termina en <code>.sha256</code>). Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Si sale la misma huella, el archivo es el original.",
+    "extra_html": "<p>Para que tus amigos te escuchen, Chachalaca usa <strong>VB-CABLE</strong>, el micrófono virtual de VB-Audio, que viene de <a href=\"https://vb-cable.com\">www.vb-cable.com</a>. Va dentro del .zip tal como lo publica VB-Audio, y se instala con un botón. VB-CABLE no es de Brizna Soft: es <strong>donationware</strong> (se baja gratis y cada quien da lo que quiera para apoyar a su autor), y toda ayuda es bienvenida. Si te sirve, <a href=\"https://vb-audio.com/Cable/\">apoya a su autor</a>.</p>",
+    "original": "Cada versión la arma GitHub a partir del código público, y junto a cada .zip publicamos su huella SHA-256 (un código único que tiene cada archivo; está en el archivo que termina en <code>.sha256</code>). Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Si sale la misma huella, el archivo es el original.",
     "creditos": "Chachalaca usa <a href=\"https://github.com/mackron/miniaudio\">miniaudio</a> y <a href=\"https://github.com/Signalsmith-Audio/signalsmith-stretch\">Signalsmith Stretch</a>, y trae <a href=\"https://vb-audio.com/Cable/\">VB-CABLE</a>, de VB-Audio. ",
     "categoria": "MultimediaApplication",
     "so": "Windows 10, Windows 11"

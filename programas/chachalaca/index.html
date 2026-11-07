@@ -85,7 +85,7 @@
         <h2>Cómo instalarlo</h2>
         <ol class="pasos">
           <li><strong>Baja el .zip</strong> con el botón «Descargar para Windows».</li>
-          <li><strong>Descomprímelo</strong> (clic derecho y «Extraer todo») y abre <code>Chachalaca.exe</code>. No hay que instalarlo. Si Windows muestra «Windows protegió su PC», es porque el programa es nuevo y todavía no tiene firma digital: pulsa «Más información» y luego «Ejecutar de todas formas».</li>
+          <li><strong>Descomprímelo</strong> (clic derecho y «Extraer todo») y abre <code>Chachalaca.exe</code>. No hay que instalarlo. Si Windows muestra «Windows protegió su PC», es porque el programa es nuevo y todavía no tiene firma digital (un sello de pago que Windows reconoce): pulsa «Más información» y luego «Ejecutar de todas formas».</li>
           <li><strong>Si falta el micrófono virtual</strong>, pulsa «Instalar el micrófono virtual» y acepta los avisos de Windows. Si después dejas de oír tus juegos, Chachalaca te abre la página de Sonido para que elijas otra vez tus audífonos.</li>
           <li><strong>En Discord:</strong> Ajustes de usuario → Voz y video → Dispositivo de entrada → <strong>CABLE Output</strong>. Pon «Supresión de ruido» en <strong>Ninguna</strong>; si no, Discord borra los sonidos.</li>
           <li><strong>En tu juego:</strong> en las opciones de chat de voz, elige <strong>CABLE Output</strong> como micrófono.</li>
@@ -96,14 +96,14 @@
     <section id="microfono-virtual" class="seccion alterna">
       <div class="contenedor estrecho">
         <h2>El micrófono virtual es de VB-Audio</h2>
-        <p>Para que tus amigos te escuchen, Chachalaca usa <strong>VB-CABLE</strong>, el micrófono virtual de VB-Audio, que viene de <a href="https://vb-cable.com">www.vb-cable.com</a>. Va dentro del .zip tal como lo publica VB-Audio, y se instala con un botón. VB-CABLE no es de Brizna Soft: es <strong>donationware</strong>, y toda ayuda es bienvenida. Si te sirve, <a href="https://vb-audio.com/Cable/">apoya a su autor</a>.</p>
+        <p>Para que tus amigos te escuchen, Chachalaca usa <strong>VB-CABLE</strong>, el micrófono virtual de VB-Audio, que viene de <a href="https://vb-cable.com">www.vb-cable.com</a>. Va dentro del .zip tal como lo publica VB-Audio, y se instala con un botón. VB-CABLE no es de Brizna Soft: es <strong>donationware</strong> (se baja gratis y cada quien da lo que quiera para apoyar a su autor), y toda ayuda es bienvenida. Si te sirve, <a href="https://vb-audio.com/Cable/">apoya a su autor</a>.</p>
       </div>
     </section>
 
     <section id="original" class="seccion">
       <div class="contenedor estrecho">
         <h2>Cómo saber que es el original</h2>
-        <p>Cada versión la arma GitHub a partir del código público, y junto a cada .zip publicamos su huella SHA-256 (el archivo que termina en <code>.sha256</code>). Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Si sale la misma huella, el archivo es el original.</p>
+        <p>Cada versión la arma GitHub a partir del código público, y junto a cada .zip publicamos su huella SHA-256 (un código único que tiene cada archivo; está en el archivo que termina en <code>.sha256</code>). Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Si sale la misma huella, el archivo es el original.</p>
       </div>
     </section>
 

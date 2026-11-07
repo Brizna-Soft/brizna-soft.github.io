@@ -1,7 +1,8 @@
 /* Brizna Soft: verde del estudio, azul de HNTorrent, letra del sistema (carga rápido, sin fuentes externas) */
 :root {
-  --verde: #1D9E75;
-  --verde-oscuro: #157A5A;
+  --verde: #157A5A;
+  --verde-oscuro: #0F5F46;
+  --sobre-verde: #FFFFFF;
   --azul: #1A8FD6;
   --texto: #1F2933;
   --suave: #5F6B7A;
@@ -17,6 +18,7 @@
   :root {
     --verde: #2DB88A;
     --verde-oscuro: #22A07A;
+    --sobre-verde: #121417;
     --texto: #E8EAED;
     --suave: #A0A7B0;
     --borde: #2E3238;
@@ -129,8 +131,8 @@ h1 span { color: var(--verde); white-space: nowrap; }
   transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
 .boton:hover { color: var(--texto); transform: translateY(-1px); box-shadow: var(--sombra); }
-.boton.principal { background: var(--verde); border-color: var(--verde); color: #FFFFFF; }
-.boton.principal:hover { background: var(--verde-oscuro); color: #FFFFFF; }
+.boton.principal { background: var(--verde); border-color: var(--verde); color: var(--sobre-verde); }
+.boton.principal:hover { background: var(--verde-oscuro); color: var(--sobre-verde); }
 .boton.paypal { background: #FFC439; border-color: #FFC439; color: #111111; }
 .boton.paypal:hover { color: #111111; }
 .enlace { align-self: center; font-weight: 600; text-decoration: none; }
@@ -269,7 +271,7 @@ h3 { margin: 0; font-size: 1.5rem; }
   height: 32px;
   border-radius: 50%;
   background: var(--verde);
-  color: #FFFFFF;
+  color: var(--sobre-verde);
   font-weight: 700;
   font-size: 0.95rem;
 }
@@ -351,4 +353,57 @@ h3 { margin: 0; font-size: 1.5rem; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .boton { transition: none; }
+}
+
+/* Aviso de Windows y palabras explicadas */
+.aviso-windows {
+  margin: -12px 0 28px;
+  padding: 16px 20px;
+  max-width: 52em;
+  border: 1px solid color-mix(in srgb, var(--verde) 30%, var(--borde));
+  border-left: 5px solid var(--verde);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--verde) 10%, var(--fondo));
+}
+.aviso-windows p { margin: 0; }
+.aviso-windows p + p { margin-top: 8px; color: var(--suave); font-size: 0.95rem; }
+.glosario {
+  margin-top: 28px;
+  padding: 16px 20px;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  background: var(--fondo);
+}
+.glosario summary { cursor: pointer; font-weight: 700; font-size: 1.05rem; }
+.glosario dl { margin: 16px 0 0; display: grid; gap: 14px; }
+.glosario dt { font-weight: 700; }
+.glosario dd { margin: 2px 0 0; color: var(--suave); }
+
+/* Portada corta: tarjetas chicas de programas y mods */
+.rejilla { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+.mini {
+  display: flex;
+  flex-direction: column;
+  padding: 22px;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  background: var(--fondo);
+  box-shadow: var(--sombra);
+}
+.mini-titulo { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
+.mini-titulo img { border-radius: 12px; flex: none; }
+.mini h3 { font-size: 1.25rem; }
+.mini > p { margin: 0 0 4px; }
+.mini .botones { margin-top: auto; padding-top: 18px; gap: 10px; }
+.mini .botones .boton { padding: 10px 16px; }
+.mini .mas { margin-top: 14px; }
+.mini .mas summary { cursor: pointer; font-weight: 700; }
+.mini .mas .lista { margin-top: 12px; }
+.mision { margin-top: 36px; }
+.mision h3 { margin-bottom: 8px; }
+.mision p { max-width: 46em; font-size: 1.05rem; }
+.glosario .recomendados { margin-top: 16px; }
+.mas-recomendados { margin-top: 16px; }
+@media (max-width: 760px) {
+  .rejilla { grid-template-columns: 1fr; }
 }

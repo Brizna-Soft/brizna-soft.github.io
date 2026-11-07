@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://giscus.app; style-src 'self' https://giscus.app; img-src 'self' data:; connect-src https://api.github.com; frame-src https://giscus.app; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Brizna Soft · Programas gratis, sin publicidad</title>
   <meta name="description" content="Brizna Soft junta en un solo lugar los programas básicos que todos necesitamos: gratis, sin publicidad, sin virus y con el código abierto. Baja Atarraya (descargas), HNTorrent y más.">
@@ -66,7 +66,7 @@
         <ul class="promesa">
           <li>
             <strong>Sin virus</strong>
-            <span>Cada programa lo compila GitHub a partir de su código público, y publicamos su huella SHA-256 para que compruebes que es el original.</span>
+            <span>Cada programa lo compila GitHub a partir de su código público, y publicamos su huella SHA-256 (un código único de cada archivo) para que compruebes que es el original.</span>
           </li>
           <li>
             <strong>Sin publicidad</strong>
@@ -81,222 +81,142 @@
             <span>Todo está en GitHub. Si algo falla, lo reportas y lo arreglamos a la vista de todos.</span>
           </li>
         </ul>
+        <div class="mision" id="mision">
+          <h3>Por qué hacemos esto</h3>
+          <p>Todos necesitamos alguna vez un programa gratis: para descomprimir un archivo, bajar algo, abrir un documento o arreglar la PC. Muchas veces lo que se encuentra trae anuncios, virus o pide una suscripción.</p>
+          <p>Nuestra misión es <strong>juntar en un solo lugar los programas básicos que la gente necesita</strong>, gratis y con el código libre en GitHub. Si la gente apoya, algún día podremos vivir de esto. Y si no, nuestros aportes quedan aquí igual, para quien los necesite.</p>
+        </div>
       </div>
     </section>
 
     <section id="programas" class="seccion alterna">
       <div class="contenedor">
         <h2>Programas</h2>
-
-        <article id="atarraya" class="programa" data-repo="Brizna-Soft/atarraya" data-zip="^Atarraya-\d+\.\d+\.\d+-x64\.zip$">
-          <div class="programa-info">
-            <div class="programa-titulo">
-              <img src="img/atarraya.svg" alt="" width="64" height="64">
+        <div class="aviso-windows">
+          <p><strong>Antes de abrir un programa:</strong> Windows puede decir «Windows protegió su PC». Es normal: los programas son nuevos y todavía no tienen firma digital (un sello de pago que Windows reconoce). Pulsa «Más información» y luego «Ejecutar de todas formas».</p>
+          <p>Para estar seguro de que lo que bajaste es el original, cada versión trae su huella (SHA-256). <a href="#palabras">¿Qué es eso?</a></p>
+        </div>
+        <div class="rejilla">
+          <article class="mini" data-repo="Brizna-Soft/atarraya" data-zip="^Atarraya-\d+\.\d+\.\d+-x64\.zip$">
+            <div class="mini-titulo">
+              <img src="img/atarraya.svg" alt="" width="56" height="56">
               <div>
                 <h3>Atarraya</h3>
                 <p class="version" data-version data-tipo="Gestor de descargas">Gestor de descargas · Windows 10 y 11 (64 bits)</p>
               </div>
             </div>
-            <p>Como la atarraya que se lanza y atrapa muchos peces de una vez: baja cada archivo en varias partes a la vez, también torrents, y las descargas de tu navegador.</p>
-            <ul class="lista">
-              <li>Hasta 16 conexiones por archivo, más rápido que el navegador.</li>
-              <li>Torrents y enlaces magnet, en el mismo programa.</li>
-              <li>Recolector de enlaces: copia o pega muchos y mira el nombre y el tamaño antes de bajar. Recibe Click'n'Load.</li>
-              <li>Botón «Descargar este video» sobre los videos de las páginas. Sin YouTube ni videos protegidos.</li>
-              <li>Toma las descargas de Chrome, Edge y Brave. Pausa y sigue después, aunque apagues la PC.</li>
-            </ul>
+            <p>Baja cada archivo en varias partes a la vez, también torrents, videos de las páginas y las descargas de tu navegador.</p>
             <div class="botones">
-              <a class="boton principal" data-descargar href="https://github.com/Brizna-Soft/atarraya/releases/latest">Descargar para Windows</a>
-              <a class="enlace" href="programas/atarraya/">Más detalles →</a>
-              <a class="enlace" href="https://github.com/Brizna-Soft/atarraya#conectar-con-el-navegador">Cómo conectarlo al navegador →</a>
+              <a class="boton principal" data-descargar href="https://github.com/Brizna-Soft/atarraya/releases/latest">Descargar</a>
+              <a class="boton" href="programas/atarraya/">Ver más</a>
             </div>
-            <p class="nota">Descomprime el .zip y abre <code>Atarraya.exe</code>. <a href="https://github.com/Brizna-Soft/atarraya">Código</a> · <a href="https://github.com/Brizna-Soft/atarraya/issues/new/choose">Reportar un problema</a></p>
-          </div>
-          <figure class="programa-captura">
-            <img src="img/atarraya-captura.png" width="1180" height="640" loading="lazy"
-                 alt="Ventana de Atarraya bajando la imagen de Debian por torrent, con cinco videos de Internet Archive ya terminados">
-          </figure>
-        </article>
-
-        <!--JICARO-->
-        <article id="jicaro" class="programa" data-repo="Brizna-Soft/jicaro" data-zip="^Jicaro-\d+\.\d+\.\d+-x64\.zip$">
-          <div class="programa-info">
-            <div class="programa-titulo">
-              <img src="img/jicaro.png" alt="" width="64" height="64">
+          </article>
+          <article class="mini" data-repo="Brizna-Soft/jicaro" data-zip="^Jicaro-\d+\.\d+\.\d+-x64\.zip$">
+            <div class="mini-titulo">
+              <img src="img/jicaro.png" alt="" width="56" height="56">
               <div>
                 <h3>Jícaro</h3>
                 <p class="version" data-version data-tipo="Descompresor">Descompresor · Windows 10 y 11 (64 bits)</p>
               </div>
             </div>
-            <p>Como el jícaro, el fruto hondureño que sirve de vasija: guarda y saca lo que traen tus archivos ZIP, RAR y 7z, también los RAR que bajan en varias partes.</p>
-            <ul class="lista">
-              <li>Abre ZIP, RAR, 7z, ISO, TAR y más. Los ZIP con contraseña también.</li>
-              <li>Junta los RAR en varias partes (.part01.rar...) y te dice si falta alguna.</li>
-              <li>Nunca escribe fuera de la carpeta que eliges y frena los archivos tramposos.</li>
-              <li>«Extraer aquí» en el clic derecho, si lo activas en Ajustes.</li>
-            </ul>
+            <p>Abre ZIP, RAR, 7z y más, también los RAR que bajan en varias partes.</p>
             <div class="botones">
-              <a class="boton principal" data-descargar href="https://github.com/Brizna-Soft/jicaro/releases/latest">Descargar para Windows</a>
-              <a class="enlace" href="programas/jicaro/">Más detalles →</a>
+              <a class="boton principal" data-descargar href="https://github.com/Brizna-Soft/jicaro/releases/latest">Descargar</a>
+              <a class="boton" href="programas/jicaro/">Ver más</a>
             </div>
-            <p class="nota">Descomprime el .zip y abre <code>Jicaro.exe</code>. <a href="https://github.com/Brizna-Soft/jicaro">Código</a> · <a href="https://github.com/Brizna-Soft/jicaro/issues/new/choose">Reportar un problema</a></p>
-          </div>
-          <figure class="programa-captura">
-            <img src="img/jicaro-captura.png" width="980" height="600" loading="lazy"
-                 alt="Ventana de Jícaro mostrando lo que trae un ZIP, listo para extraer">
-          </figure>
-        </article>
-        <!--/JICARO-->
-
-        <!--MAPACHE-->
-        <article id="mapache" class="programa" data-repo="Brizna-Soft/mapache" data-zip="^Mapache-\d+\.\d+\.\d+-x64\.zip$">
-          <div class="programa-info">
-            <div class="programa-titulo">
-              <img src="img/mapache.png" alt="" width="64" height="64">
+          </article>
+          <article class="mini" data-repo="Brizna-Soft/mapache" data-zip="^Mapache-\d+\.\d+\.\d+-x64\.zip$">
+            <div class="mini-titulo">
+              <img src="img/mapache.png" alt="" width="56" height="56">
               <div>
                 <h3>Mapache</h3>
                 <p class="version" data-version data-tipo="Espacio en disco y limpieza">Espacio en disco y limpieza · Windows 10 y 11 (64 bits)</p>
               </div>
             </div>
-            <p>Como el mapache que revuelve todo hasta encontrar lo que sobra: te muestra qué ocupa tu disco y limpia lo que no sirve, sin tocar lo importante.</p>
-            <ul class="lista">
-              <li>Lee todo el disco en segundos y lo muestra en un mapa de colores.</li>
-              <li>Los archivos más grandes y el espacio por tipo: videos, fotos, juegos...</li>
-              <li>Limpieza segura de temporales viejos, informes de errores y cachés. Siempre pregunta antes.</li>
-              <li>Lo que eliges quitar va a la Papelera, para que puedas recuperarlo.</li>
-            </ul>
+            <p>Te muestra qué ocupa tu disco y limpia lo que sobra, siempre con tu permiso.</p>
             <div class="botones">
-              <a class="boton principal" data-descargar href="https://github.com/Brizna-Soft/mapache/releases/latest">Descargar para Windows</a>
-              <a class="enlace" href="programas/mapache/">Más detalles →</a>
+              <a class="boton principal" data-descargar href="https://github.com/Brizna-Soft/mapache/releases/latest">Descargar</a>
+              <a class="boton" href="programas/mapache/">Ver más</a>
             </div>
-            <p class="nota">Descomprime el .zip y abre <code>Mapache.exe</code>. <a href="https://github.com/Brizna-Soft/mapache">Código</a> · <a href="https://github.com/Brizna-Soft/mapache/issues/new/choose">Reportar un problema</a></p>
-          </div>
-          <figure class="programa-captura">
-            <img src="img/mapache-captura.png" width="1000" height="620" loading="lazy"
-                 alt="Mapa de colores de Mapache: cada rectángulo es una carpeta, más grande cuanto más ocupa">
-          </figure>
-        </article>
-        <!--/MAPACHE-->
-
-        <!--GUARA-->
-        <article id="guara" class="programa" data-repo="Brizna-Soft/guara" data-zip="^Guara-\d+\.\d+\.\d+-x64\.zip$">
-          <div class="programa-info">
-            <div class="programa-titulo">
-              <img src="img/guara.png" alt="" width="64" height="64">
+          </article>
+          <article class="mini" data-repo="Brizna-Soft/guara" data-zip="^Guara-\d+\.\d+\.\d+-x64\.zip$">
+            <div class="mini-titulo">
+              <img src="img/guara.png" alt="" width="56" height="56">
               <div>
                 <h3>Guara</h3>
                 <p class="version" data-version data-tipo="Revisa tu PC">Revisa tu PC · Windows 10 y 11 (64 bits)</p>
               </div>
             </div>
-            <p>Como la guara roja, nuestra ave nacional, que todo lo ve y todo lo cuenta: revisa tu PC y te explica en palabras sencillas qué tiene y qué hacer.</p>
-            <ul class="lista">
-              <li>Disco, memoria, procesador, tarjeta gráfica, batería y aparatos con problemas.</li>
-              <li>Avisa de pantallas azules y apagados inesperados.</li>
-              <li>Buscador de soluciones con pasos seguros y enlaces oficiales de Microsoft.</li>
-              <li>Solo lee: no cambia nada. Su informe para pedir ayuda no lleva tus datos.</li>
-            </ul>
+            <p>Revisa tu PC y te dice, en palabras simples, qué le pasa y cómo arreglarlo.</p>
             <div class="botones">
-              <a class="boton principal" data-descargar href="https://github.com/Brizna-Soft/guara/releases/latest">Descargar para Windows</a>
-              <a class="enlace" href="programas/guara/">Más detalles →</a>
+              <a class="boton principal" data-descargar href="https://github.com/Brizna-Soft/guara/releases/latest">Descargar</a>
+              <a class="boton" href="programas/guara/">Ver más</a>
             </div>
-            <p class="nota">Descomprime el .zip y abre <code>Guara.exe</code>. <a href="https://github.com/Brizna-Soft/guara">Código</a> · <a href="https://github.com/Brizna-Soft/guara/issues/new/choose">Reportar un problema</a></p>
-          </div>
-          <figure class="programa-captura">
-            <img src="img/guara-captura.png" width="1000" height="620" loading="lazy"
-                 alt="Buscador de soluciones de Guara con los pasos para cuando la PC está lenta">
-          </figure>
-        </article>
-        <!--/GUARA-->
-
-        <!--MOSQUITERO-->
-        <article id="mosquitero" class="programa" data-repo="Brizna-Soft/mosquitero" data-zip="^Mosquitero-\d+\.\d+\.\d+-chrome\.zip$">
-          <div class="programa-info">
-            <div class="programa-titulo">
-              <img src="img/mosquitero.png" alt="" width="64" height="64">
+          </article>
+          <article class="mini" data-repo="Brizna-Soft/mosquitero" data-zip="^Mosquitero-\d+\.\d+\.\d+-chrome\.zip$">
+            <div class="mini-titulo">
+              <img src="img/mosquitero.png" alt="" width="56" height="56">
               <div>
                 <h3>Mosquitero</h3>
                 <p class="version" data-version data-tipo="Bloqueador de anuncios">Bloqueador de anuncios · Chrome, Edge y Brave</p>
               </div>
             </div>
-            <p>Como el mosquitero que deja afuera a los zancudos: bloquea los anuncios y los rastreadores, para que las páginas carguen más rápido y nadie te siga.</p>
-            <ul class="lista">
-              <li>Usa las listas EasyList, EasyPrivacy y EasyList en español.</li>
-              <li>Oculta los huecos que dejan los anuncios.</li>
-              <li>Un clic para apagarlo en un sitio que no funcione bien.</li>
-              <li>No manda nada a ningún lado: todo pasa dentro de tu navegador.</li>
-            </ul>
+            <p>Bloquea anuncios y rastreadores en Chrome, Edge y Brave. No manda nada a ningún lado.</p>
             <div class="botones">
               <a class="boton principal" data-descargar href="https://github.com/Brizna-Soft/mosquitero/releases/latest">Descargar la extensión</a>
-              <a class="enlace" href="programas/mosquitero/">Más detalles →</a>
-              <a class="enlace" href="https://github.com/Brizna-Soft/mosquitero#readme">Cómo instalarla →</a>
+              <a class="boton" href="programas/mosquitero/">Ver más</a>
             </div>
-            <p class="nota">Mientras llega a las tiendas, se instala con «Cargar descomprimida». <a href="https://github.com/Brizna-Soft/mosquitero">Código</a> · <a href="https://github.com/Brizna-Soft/mosquitero/issues/new/choose">Reportar un anuncio que se escapó</a></p>
-          </div>
-          <figure class="programa-captura">
-            <img src="img/mosquitero-captura.png" width="1000" height="620" loading="lazy"
-                 alt="Ventanita de Mosquitero con el contador de anuncios y rastreadores bloqueados">
-          </figure>
-        </article>
-        <!--/MOSQUITERO-->
-
-        <article id="hntorrent" class="programa" data-repo="Brizna-Soft/hntorrent-descargas" data-zip="^HNTorrent-\d+\.\d+\.\d+-x64\.zip$">
-          <div class="programa-info">
-            <div class="programa-titulo">
-              <img src="img/hntorrent.svg" alt="" width="64" height="64">
+          </article>
+          <article class="mini" data-repo="Brizna-Soft/hntorrent-descargas" data-zip="^HNTorrent-\d+\.\d+\.\d+-x64\.zip$">
+            <div class="mini-titulo">
+              <img src="img/hntorrent.svg" alt="" width="56" height="56">
               <div>
                 <h3>HNTorrent</h3>
                 <p class="version" data-version data-tipo="BitTorrent">BitTorrent · Windows 10 y 11 (64 bits)</p>
               </div>
             </div>
-            <p>Un cliente de BitTorrent liviano y fácil de usar, para bajar archivos sin anuncios ni programas extra.</p>
-            <ul class="lista">
-              <li>Gratis y sin publicidad.</li>
-              <li>No hace falta instalarlo: se descomprime y se abre.</li>
-              <li>Se actualiza solo, y cada versión va firmada.</li>
-              <li>En español, con modo claro y oscuro.</li>
-            </ul>
+            <p>Un cliente de BitTorrent liviano y en español, sin anuncios ni programas extra.</p>
             <div class="botones">
-              <a class="boton principal" data-descargar href="https://github.com/Brizna-Soft/hntorrent-descargas/releases/latest">Descargar para Windows</a>
-              <a class="enlace" href="programas/hntorrent/">Más detalles →</a>
-              <a class="enlace" href="https://github.com/Brizna-Soft/hntorrent-descargas/releases">Todas las versiones →</a>
+              <a class="boton principal" data-descargar href="https://github.com/Brizna-Soft/hntorrent-descargas/releases/latest">Descargar</a>
+              <a class="boton" href="programas/hntorrent/">Ver más</a>
             </div>
-            <p class="nota">Descomprime el .zip y abre <code>HNTorrent.exe</code>. Si no abre, instala el <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">Visual C++ de Microsoft</a>. <a href="https://github.com/Brizna-Soft/hntorrent-descargas/issues/new/choose">Reportar un problema</a></p>
-          </div>
-          <figure class="programa-captura">
-            <img src="img/hntorrent-captura.png" width="984" height="442" loading="lazy"
-                 alt="Ventana de HNTorrent con tres descargas: una completa, una a la mitad y una en pausa">
-          </figure>
-        </article>
-
-        <!--CHACHALACA-->
-        <article id="chachalaca" class="programa" data-repo="Brizna-Soft/chachalaca" data-zip="^Chachalaca-\d+\.\d+\.\d+-x64\.zip$">
-          <div class="programa-info">
-            <div class="programa-titulo">
-              <img src="img/chachalaca.png" alt="" width="64" height="64">
+          </article>
+          <article class="mini" data-repo="Brizna-Soft/chachalaca" data-zip="^Chachalaca-\d+\.\d+\.\d+-x64\.zip$">
+            <div class="mini-titulo">
+              <img src="img/chachalaca.png" alt="" width="56" height="56">
               <div>
                 <h3>Chachalaca</h3>
                 <p class="version" data-version data-tipo="Sonidos y cambio de voz">Sonidos y cambio de voz · Windows 10 y 11 (64 bits)</p>
               </div>
             </div>
-            <p>Como la chachalaca, el pájaro más escandaloso del monte: pone sonidos en tu micrófono y te cambia la voz en vivo, para Discord y los juegos con chat de voz.</p>
-            <ul class="lista">
-              <li>16 sonidos propios y 13 efectos de voz: ardilla, robot, monstruo, eco y más.</li>
-              <li>Quita el ruido de fondo y calla el micrófono cuando no hablas.</li>
-              <li>Atajos de teclado que funcionan dentro de los juegos.</li>
-              <li>Micrófono virtual incluido: VB-CABLE, de VB-Audio.</li>
-            </ul>
+            <p>Pone sonidos en tu micrófono y te cambia la voz en vivo, para Discord y los juegos.</p>
             <div class="botones">
-              <a class="boton principal" data-descargar href="https://github.com/Brizna-Soft/chachalaca/releases/latest">Descargar para Windows</a>
-              <a class="enlace" href="programas/chachalaca/">Más detalles →</a>
+              <a class="boton principal" data-descargar href="https://github.com/Brizna-Soft/chachalaca/releases/latest">Descargar</a>
+              <a class="boton" href="programas/chachalaca/">Ver más</a>
             </div>
-            <p class="nota">Descomprime el .zip y abre <code>Chachalaca.exe</code>. VB-CABLE es de VB-Audio y es donationware: <a href="https://vb-audio.com/Cable/">apoya a su autor</a>. <a href="https://github.com/Brizna-Soft/chachalaca">Código</a> · <a href="https://github.com/Brizna-Soft/chachalaca/issues/new/choose">Reportar un problema</a></p>
-          </div>
-          <figure class="programa-captura">
-            <img src="img/chachalaca-captura.png" width="840" height="800" loading="lazy"
-                 alt="Ventana de Chachalaca con los micrófonos elegidos, los botones de voces y el tablero de sonidos">
-          </figure>
-        </article>
-        <!--/CHACHALACA-->
+          </article>
+        </div>
+        <details class="glosario" id="palabras">
+          <summary>Palabras que quizá no conoces</summary>
+          <dl>
+            <dt>Huella SHA-256</dt>
+            <dd>Un código único que tiene cada archivo, como su huella digital. Si la tuya es igual a la que publicamos, el archivo es el original y nadie lo cambió. En la página de cada programa te decimos cómo comprobarla.</dd>
+            <dt>Firma digital</dt>
+            <dd>Un sello que prueba quién hizo un programa. Cuesta dinero cada año; por eso Windows avisa con programas nuevos o gratis como los nuestros. Estamos pidiendo una firma gratis para proyectos de código abierto.</dd>
+            <dt>Torrent y enlace magnet</dt>
+            <dd>Dos formas de bajar un archivo de muchas personas a la vez. Un archivo .torrent o un enlace magnet (empieza con «magnet:») le dice a tu programa qué bajar. Sirven para cosas legales, como las imágenes de Linux.</dd>
+            <dt>Click'n'Load</dt>
+            <dd>Un botón que traen algunos sitios de descargas para mandar sus enlaces a tu gestor de descargas, sin copiarlos uno por uno. Atarraya lo recibe solo desde tu propia PC.</dd>
+            <dt>Donationware</dt>
+            <dd>Programa que se baja gratis y cada quien da lo que quiera para apoyar a su autor. VB-CABLE, el micrófono virtual de Chachalaca, es así.</dd>
+            <dt>Visual C++ de Microsoft</dt>
+            <dd>Un componente gratis de Windows que algunos programas necesitan para abrir. Si HNTorrent no abre, instálalo desde el enlace de Microsoft.</dd>
+            <dt>64 bits</dt>
+            <dd>El tipo de Windows de casi todas las PC de hoy. Para saberlo: Configuración › Sistema › Acerca de, y mira «Tipo de sistema».</dd>
+            <dt>Código abierto</dt>
+            <dd>Cualquiera puede leer cómo está hecho el programa en GitHub y comprobar que no hace nada escondido.</dd>
+          </dl>
+        </details>
       </div>
     </section>
 
@@ -304,9 +224,9 @@
       <div class="contenedor">
         <h2>Mods en español</h2>
         <p class="intro">Mods y guías hechos por nosotros, en español. No volvemos a subir archivos de otros sitios: te decimos dónde bajarlos de su página oficial y damos crédito a sus autores. Nada de esto sirve para saltarse los sistemas anti-trampas de los juegos en línea.</p>
-        <article class="programa">
-          <div class="programa-info">
-            <div class="programa-titulo">
+        <div class="rejilla">
+          <article class="mini">
+            <div class="mini-titulo">
               <div>
                 <h3>CoopMinimap</h3>
                 <p class="version">Mod para Hollow Knight: Silksong · beta</p>
@@ -316,27 +236,30 @@
             <div class="botones">
               <a class="boton principal" href="mods/coopminimap/">Ver el mod e instalarlo</a>
             </div>
-          </div>
-          <figure class="programa-captura">
-            <img src="img/mods/coopminimap-partida.jpg" width="1600" height="915" loading="lazy"
-                 alt="Partida de Silksong en cooperativo con el minimapa de CoopMinimap en una esquina">
-          </figure>
-        </article>
+          </article>
 
-        <article class="guia">
-          <h3>Guía: Cheat Engine sin sorpresas</h3>
-          <p class="version">Programa de otros · para juegos de un jugador · Windows</p>
-          <p>Cheat Engine cambia valores de un juego mientras lo juegas (vidas, dinero, tiempo). No es nuestro: lo explicamos porque mucha gente lo busca y su instalador trae sorpresas.</p>
-          <ul class="lista">
-            <li><strong>El instalador muestra ofertas de otros programas.</strong> Recházalas todas: no hacen falta. Si aceptaste una por error, quítala en Configuración › Aplicaciones.</li>
-            <li><strong>Solo en juegos de un jugador.</strong> En juegos en línea puede ir contra las reglas del juego y llevarte a un baneo. Revisa los términos del juego antes de usarlo.</li>
-            <li><strong>No apagues tu antivirus</strong> para instalarlo o usarlo, aunque en otros sitios lo aconsejen.</li>
-            <li>Su página pide tener 18 años o más para instalarlo.</li>
-          </ul>
-          <div class="botones">
-            <a class="boton" href="https://www.cheatengine.org/">Página oficial de Cheat Engine</a>
-          </div>
-        </article>
+          <article class="mini">
+            <div class="mini-titulo">
+              <div>
+                <h3>Guía: Cheat Engine sin sorpresas</h3>
+                <p class="version">Programa de otros · para juegos de un jugador · Windows</p>
+              </div>
+            </div>
+            <p>Cheat Engine cambia valores de un juego mientras lo juegas (vidas, dinero, tiempo). No es nuestro: lo explicamos porque mucha gente lo busca y su instalador trae sorpresas.</p>
+            <details class="mas">
+              <summary>Leer la guía</summary>
+              <ul class="lista">
+                <li><strong>El instalador muestra ofertas de otros programas.</strong> Recházalas todas: no hacen falta. Si aceptaste una por error, quítala en Configuración › Aplicaciones.</li>
+                <li><strong>Solo en juegos de un jugador.</strong> En juegos en línea puede ir contra las reglas del juego y llevarte a un baneo. Revisa los términos del juego antes de usarlo.</li>
+                <li><strong>No apagues tu antivirus</strong> para instalarlo o usarlo, aunque en otros sitios lo aconsejen.</li>
+                <li>Su página pide tener 18 años o más para instalarlo.</li>
+              </ul>
+              <div class="botones">
+                <a class="boton" href="https://www.cheatengine.org/">Página oficial de Cheat Engine</a>
+              </div>
+            </details>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -369,19 +292,16 @@
           <li><a href="https://www.sumatrapdfreader.org/">SumatraPDF</a><span>Abre PDF y libros electrónicos, rápido y liviano.</span></li>
           <li><a href="https://www.libreoffice.org/">LibreOffice</a><span>Documentos, hojas de cálculo y presentaciones, compatible con Office.</span></li>
           <li><a href="https://www.videolan.org/vlc/">VLC</a><span>Reproduce casi cualquier video o música.</span></li>
-          <li><a href="https://www.gimp.org/">GIMP</a><span>Edita fotos e imágenes.</span></li>
-          <li><a href="https://krita.org/es/">Krita</a><span>Para dibujar y pintar.</span></li>
-          <li><a href="https://keepassxc.org/">KeePassXC</a><span>Guarda tus contraseñas de forma segura.</span></li>
-          <li><a href="https://www.firefox.com/es-ES/">Firefox</a><span>Navegador que cuida tu privacidad.</span></li>
         </ul>
-      </div>
-    </section>
-
-    <section id="mision" class="seccion">
-      <div class="contenedor mision">
-        <h2>Por qué hacemos esto</h2>
-        <p>Todos necesitamos alguna vez un programa gratis: para descomprimir un archivo, bajar algo, abrir un documento o arreglar la PC. Muchas veces lo que se encuentra trae anuncios, virus o pide una suscripción.</p>
-        <p>Nuestra misión es <strong>juntar en un solo lugar los programas básicos que la gente necesita</strong>, gratis y con el código libre en GitHub. Si la gente apoya, algún día podremos vivir de esto. Y si no, nuestros aportes quedan aquí igual, para quien los necesite.</p>
+        <details class="glosario mas-recomendados">
+          <summary>Ver más programas buenos</summary>
+          <ul class="recomendados">
+            <li><a href="https://www.gimp.org/">GIMP</a><span>Edita fotos e imágenes.</span></li>
+            <li><a href="https://krita.org/es/">Krita</a><span>Para dibujar y pintar.</span></li>
+            <li><a href="https://keepassxc.org/">KeePassXC</a><span>Guarda tus contraseñas de forma segura.</span></li>
+            <li><a href="https://www.firefox.com/es-ES/">Firefox</a><span>Navegador que cuida tu privacidad.</span></li>
+          </ul>
+        </details>
       </div>
     </section>
 
@@ -389,29 +309,10 @@
       <div class="contenedor opina">
         <div>
           <h2>Opina, pregunta o reporta</h2>
-          <p>¿Algo no funciona? Cada programa tiene su botón «Reportar un problema». Para ideas, preguntas o comentarios generales, escríbenos aquí abajo. Se entra con una cuenta gratis de GitHub.</p>
+          <p>¿Algo no funciona? Cada programa tiene su botón «Reportar un problema». Para ideas, preguntas o comentarios generales, usa las discusiones de GitHub. Se entra con una cuenta gratis.</p>
           <p class="nota">Moderamos los comentarios: los insultos, el spam y los enlaces engañosos se ocultan solos. No pongas datos personales: los comentarios son públicos.</p>
         </div>
-        <a class="boton" href="https://github.com/Brizna-Soft/brizna-soft.github.io/discussions">Ver todas las discusiones</a>
-      </div>
-      <div class="contenedor comentarios-giscus">
-        <div class="giscus"></div>
-        <script src="https://giscus.app/client.js"
-                data-repo="Brizna-Soft/brizna-soft.github.io"
-                data-repo-id="R_kgDOVaDxjQ"
-                data-category="Announcements"
-                data-category-id="DIC_kwDOVaDxjc4DJzM8"
-                data-mapping="specific"
-                data-term="Comentarios de la página"
-                data-strict="1"
-                data-reactions-enabled="1"
-                data-emit-metadata="0"
-                data-input-position="top"
-                data-theme="preferred_color_scheme"
-                data-lang="es"
-                data-loading="lazy"
-                crossorigin="anonymous"
-                async></script>
+        <a class="boton" href="https://github.com/Brizna-Soft/brizna-soft.github.io/discussions">Ver las discusiones</a>
       </div>
     </section>
 
@@ -427,6 +328,7 @@
         </a>
       </div>
     </section>
+
   </main>
 
   <footer class="pie">

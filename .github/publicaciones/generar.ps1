@@ -1,6 +1,6 @@
 # Arma las publicaciones de la pagina a partir de contenido/publicaciones/*.json (las escribe el panel):
 #   - publicaciones/index.html con todas;
-#   - la seccion "Publicaciones" de la portada (index.html) con las 6 mas nuevas;
+#   - la seccion "Publicaciones" de la portada (index.html) con las 3 mas nuevas;
 #   - la direccion /publicaciones/ en sitemap.xml.
 # Solo salen las que tienen "publicada" y "legal" marcados. Si un dato esta mal, se detiene sin cambiar nada.
 # Uso: powershell -File .github\publicaciones\generar.ps1 [-Revisar]   (-Revisar solo comprueba los datos)
@@ -94,7 +94,7 @@ if ($html -notmatch '<!--PUBLICACIONES-->') {
 }
 $seccion = ''
 if ($lista.Count) {
-    $tarjetas = ($lista | Select-Object -First 6 | ForEach-Object { Tarjeta $_ '' }) -join "`n"
+    $tarjetas = ($lista | Select-Object -First 3 | ForEach-Object { Tarjeta $_ '' }) -join "`n"
     $seccion = ([IO.File]::ReadAllText((Join-Path $aqui 'seccion.plantilla'), $utf8).Replace('{{TARJETAS}}', $tarjetas) -replace "`r`n", "`n").TrimEnd() + "`n"
 }
 $html = [regex]::Replace($html, '(?s)<!--PUBLICACIONES-->.*?<!--/PUBLICACIONES-->', { param($m) "<!--PUBLICACIONES-->`n$seccion    <!--/PUBLICACIONES-->" })
