@@ -103,7 +103,7 @@
     "items": [
       "Lee todo el disco en segundos y lo muestra en un mapa de colores.",
       "Los archivos más grandes y el espacio por tipo: videos, fotos, juegos...",
-      "Limpieza segura de temporales viejos, informes de errores y cachés. Siempre pregunta antes.",
+      "Limpieza segura de temporales viejos, informes de errores y cachés. Siempre pregunta antes. Si un archivo puede ejecutar un programa, también pregunta antes de abrirlo.",
       "Lo que eliges quitar va a la Papelera, para que puedas recuperarlo."
     ],
     "pasos": [
@@ -141,7 +141,7 @@
     "items": [
       "Disco, memoria, procesador, tarjeta gráfica, batería y aparatos con problemas.",
       "Avisa de pantallas azules y apagados inesperados.",
-      "Buscador de soluciones con pasos seguros y enlaces oficiales de Microsoft.",
+      "Buscador de soluciones con pasos comunes y de poco riesgo, que haces tú, y enlaces oficiales de Microsoft. Si un paso borra algo o reinicia la PC, te lo dice antes.",
       "Solo lee: no cambia nada. Su informe para pedir ayuda no lleva tus datos."
     ],
     "pasos": [
