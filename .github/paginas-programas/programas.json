@@ -203,7 +203,7 @@
     "nombre": "HNTorrent",
     "titulo": "HNTorrent: cliente de BitTorrent gratis y en español para Windows · Brizna Soft",
     "og_titulo": "HNTorrent: BitTorrent gratis y en español",
-    "descripcion": "HNTorrent es un cliente de BitTorrent gratis, liviano y en español para Windows 10 y 11, sin anuncios ni programas extra. Se actualiza solo y cada actualización va firmada.",
+    "descripcion": "HNTorrent es un cliente de BitTorrent gratis, liviano y en español para Windows 10 y 11, sin anuncios ni programas extra. Cada actualización va firmada.",
     "tipo": "BitTorrent",
     "plataforma": "Windows 10 y 11 (64 bits)",
     "h1": "HNTorrent: BitTorrent liviano <span>y en español.</span>",
@@ -222,9 +222,10 @@
     "items": [
       "Gratis y sin publicidad.",
       "No hace falta instalarlo: se descomprime y se abre.",
-      "Se actualiza solo, y cada actualización va firmada.",
-      "Si prefieres, en Preferencias apagas la búsqueda de versiones nuevas al abrir.",
-      "En español, con modo claro y oscuro."
+      "Cada actualización va firmada, y HNTorrent comprueba la firma antes de instalarla.",
+      "La primera vez que lo abres, te pregunta si quieres que busque versiones nuevas cada vez que se abre. Se cambia en Preferencias.",
+      "En español, con modo claro y oscuro.",
+      "Opcional: en Preferencias > General hay un botón para abrir los enlaces magnet y los archivos .torrent con HNTorrent. Solo cambia cosas de tu usuario y se quita con «Dejar de ofrecerlo»."
     ],
     "pasos": [
       "<strong>Baja el .zip</strong> con el botón «Descargar para Windows».",
@@ -232,7 +233,7 @@
       "<strong>Abre <code>HNTorrent.exe</code>.</strong> Si Windows muestra «Windows protegió su PC», es porque el programa es nuevo y todavía no tiene firma digital (un sello de pago que Windows reconoce): pulsa «Más información» y luego «Ejecutar de todas formas».",
       "<strong>Si no abre</strong>, instala el <a href=\"https://aka.ms/vs/17/release/vc_redist.x64.exe\">Visual C++ de Microsoft</a> (un componente gratis de Windows que algunos programas necesitan) y vuelve a abrirlo."
     ],
-    "original": "Cada versión la arma GitHub a partir del código público. Sus huellas SHA-256 están en el archivo <code>SHA256SUMS.txt</code> de cada versión. Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Además, HNTorrent comprueba la firma de cada actualización antes de instalarla.",
+    "original": "Cada versión la arma GitHub a partir del código público. Sus huellas SHA-256 están en el archivo <code>SHA256SUMS.txt</code> de cada versión. Para comprobarla, abre PowerShell en la carpeta de la descarga y escribe <code>Get-FileHash</code> seguido del nombre del .zip. Además, HNTorrent comprueba la firma de cada actualización antes de instalarla. Cada .zip también tiene una atestación pública (una constancia de que lo armó GitHub con el código del repositorio). Se comprueba con la herramienta <code>gh</code> de GitHub: <code>gh attestation verify archivo.zip --repo Brizna-Soft/hntorrent</code>.",
     "creditos": "HNTorrent está basado en <a href=\"https://github.com/picotorrent/picotorrent\">PicoTorrent</a> (licencia MIT) y usa <a href=\"https://libtorrent.org\">libtorrent</a>. ",
     "categoria": "UtilitiesApplication",
     "so": "Windows 10, Windows 11"
